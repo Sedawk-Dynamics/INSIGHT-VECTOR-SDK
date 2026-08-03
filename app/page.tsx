@@ -11,7 +11,7 @@ import Footer from '@/components/footer'
 
 export default function Home() {
   return (  
-    
+
     <main className="bg-white">
       <Navbar />
       <HeroSection />
@@ -20,6 +20,7 @@ export default function Home() {
       <ValuesSection />
       <FounderSection />
       <WhyChooseSection />
+      
       <InsightsSection />
       <ContactSection />
       <Footer />
