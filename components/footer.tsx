@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Mail } from 'lucide-react'
 import { socialLinks } from '@/components/social-icons'
 
 const footerLinks = {
