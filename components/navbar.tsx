@@ -8,16 +8,18 @@ import { ChevronDown, Menu, X } from 'lucide-react'
 
 const services = [
   { label: 'Strategic Advisory', href: '/strategic-advisory' },
-  { label: 'Executive Coaching', href: '#executive-coaching' },
-  { label: 'Leadership Development', href: '#leadership-development' },
+  { label: 'Executive Coaching', href: '/#executive-coaching' },
+  { label: 'Leadership Development', href: '/#leadership-development' },
 ]
 
+// Section links are rooted at "/" so they still work from /gallery and
+// /strategic-advisory, not just the home page.
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services', hasDropdown: true },
-  { label: 'Our Founder', href: '#founder' },
-  { label: 'Featured Insights', href: '#insights' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'Services', href: '/#services', hasDropdown: true },
+  { label: 'Our Founder', href: '/#founder' },
+  { label: 'Media & Gallery', href: '/gallery' },
+  { label: 'Contact Us', href: '/#contact' },
 ]
 
 export default function Navbar() {
@@ -41,7 +43,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-[72px]">
         {/* Logo */}
-        <Link href="#home" className="flex items-center shrink-0" aria-label="Insight Vector home">
+        <Link href="/" className="flex items-center shrink-0" aria-label="Insight Vector home">
           <Image
             src="/logo.png"
             alt="Insight Vector"
@@ -113,7 +115,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden lg:flex items-center shrink-0">
           <Link
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white font-poppins text-base font-bold leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
           >
             Get in Touch
@@ -164,7 +166,7 @@ export default function Navbar() {
                 ))}
               </div>
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 inline-flex items-center justify-center h-11 px-6 bg-[#537AED] text-white font-poppins text-base font-bold rounded-full hover:bg-[#0C2298] transition-colors duration-300 ease-out"
               >
