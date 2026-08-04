@@ -71,10 +71,13 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Masonry grid */}
+      {/* Uniform grid — every card is the same square tile so rows and columns
+          line up. The photos mix portrait posters with landscape shots, so the
+          image is contained (not cropped) inside the tile: nothing gets cut off
+          and the cards still align. */}
       <section className="pb-24 lg:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {photos.map((photo, i) => (
               <motion.button
                 key={photo.src}
@@ -85,15 +88,14 @@ export default function GalleryPage() {
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 aria-label={`View gallery image ${i + 1} larger`}
-                className="group relative mb-6 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-[#D0DAF8] bg-[#EEF2FF] cursor-pointer hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300"
+                className="group relative block w-full aspect-square overflow-hidden rounded-2xl border border-[#D0DAF8] bg-[#EEF2FF] cursor-pointer hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300"
               >
                 <Image
                   src={photo.src}
                   alt={`Insight Vector gallery image ${i + 1}`}
-                  width={photo.width}
-                  height={photo.height}
+                  fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
                 <span className="pointer-events-none absolute inset-0 bg-[#0C2298]/0 group-hover:bg-[#0C2298]/10 transition-colors duration-300" />
               </motion.button>
