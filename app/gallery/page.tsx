@@ -146,6 +146,7 @@ const mediaCoverage: MediaItem[] = [
     tagline: 'Comments on the RBI Monetary Policy.',
     publication: 'ANI News',
     date: 'February 2026',
+    image: '/founder-portrait.jpg',
     links: [
       {
         label: 'Read more',
@@ -227,6 +228,7 @@ const podcasts: MediaItem[] = [
   {
     title: 'On board governance, risk and corporate governance',
     publication: 'Podcast I',
+    image: '/founder-portrait.jpg',
     links: [
       {
         label: 'Listen on LinkedIn',
@@ -237,6 +239,7 @@ const podcasts: MediaItem[] = [
   {
     title: 'Artificial intelligence is already transforming the boardroom',
     publication: 'Podcast II',
+    image: '/founder-portrait.jpg',
     links: [
       {
         label: 'Listen on LinkedIn',
@@ -247,6 +250,7 @@ const podcasts: MediaItem[] = [
   {
     title: 'Crisis leadership and leading under uncertainty',
     publication: 'Podcast III',
+    image: '/founder-portrait.jpg',
     links: [
       {
         label: 'Listen on LinkedIn',
