@@ -83,7 +83,7 @@ export default function ValuesSection() {
                 </div>
 
                 <h3 className="font-serif text-xl text-[#0C2298] mb-2">{value.title}</h3>
-                <p className="font-sans text-sm text-[#0C2298] leading-relaxed font-light">
+                <p className="font-sans text-sm text-[#0C2298] leading-relaxed font-normal">
                   {value.description}
                 </p>
               </motion.div>

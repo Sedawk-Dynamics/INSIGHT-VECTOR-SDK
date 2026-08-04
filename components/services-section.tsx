@@ -64,7 +64,7 @@ export default function ServicesSection() {
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
             Three Engagement Area
           </h2>
-          <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-light">
+          <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-normal">
             Strategy, growth and risk cannot be managed in separate boxes. Our integrated perspective
             helps businesses pursue opportunity while building resilience.
           </p>
@@ -99,7 +99,7 @@ export default function ServicesSection() {
                 {/* Content */}
                 <h3 className="font-serif text-2xl text-[#0C2298] mb-2 leading-snug">{service.title}</h3>
                 <p className="text-sm font-semibold text-[#0C2298] mb-4 italic font-sans">{service.tagline}</p>
-                <p className="text-sm text-[#0C2298] leading-relaxed font-sans font-light mb-6 flex-1">
+                <p className="text-sm text-[#0C2298] leading-relaxed font-sans font-normal mb-6 flex-1">
                   {service.description}
                 </p>
 

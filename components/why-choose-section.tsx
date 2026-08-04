@@ -112,7 +112,7 @@ export default function WhyChooseSection() {
                       <h3 className="font-serif text-xl lg:text-2xl text-[#0C2298] mb-2">{reason.title}</h3>
                     </div>
                   </div>
-                  <p className="font-sans text-[#0C2298] leading-relaxed font-light text-base">
+                  <p className="font-sans text-[#0C2298] leading-relaxed font-normal text-base">
                     {reason.description}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function WhyChooseSection() {
             <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3 text-balance">
               Navigate Complexity with Confidence.
             </h3>
-            <p className="font-sans text-white/60 font-light">
+            <p className="font-sans text-white/60 font-normal">
               Partner with Insight Vector to make better decisions at every critical juncture.
             </p>
           </div>

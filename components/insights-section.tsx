@@ -121,7 +121,7 @@ export default function InsightsSection() {
               </h3>
 
               <p
-                className={`font-sans text-sm leading-relaxed font-light mb-6 ${
+                className={`font-sans text-sm leading-relaxed font-normal mb-6 ${
                   insight.color === 'bg-[#0C2298]' ? 'text-white/60' : 'text-[#0C2298]'
                 }`}
               >

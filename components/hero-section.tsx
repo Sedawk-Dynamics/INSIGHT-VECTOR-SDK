@@ -108,7 +108,7 @@ export default function HeroSection() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-sans text-lg text-[#0C2298] leading-relaxed max-w-xl font-light"
+              className="font-sans text-lg text-[#0C2298] leading-relaxed max-w-xl font-normal"
             >
               Insight Vector is a founder-led strategic advisory, executive coaching and leadership
               development firm helping founders, business owners, CXOs and senior leaders navigate

@@ -41,7 +41,7 @@ export default function Footer() {
               height={40}
               className="h-9 w-auto object-contain brightness-0 invert"
             />
-            <p className="font-sans text-sm text-white/60 leading-relaxed font-light max-w-xs">
+            <p className="font-sans text-sm text-white/60 leading-relaxed font-normal max-w-xs">
               Clarity for Complexity. Direction for What Comes Next. A founder-led strategic advisory, executive coaching and leadership development firm.
             </p>
             {/* Social icons */}
@@ -86,7 +86,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
               <h4 className="font-serif text-xl text-white mb-1">Stay Informed</h4>
-              <p className="text-sm text-white/50 font-sans font-light">
+              <p className="text-sm text-white/50 font-sans font-normal">
                 Receive occasional insights on strategy, leadership and risk.
               </p>
             </div>

@@ -37,7 +37,7 @@ export default function ContactSection() {
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-4 text-balance">
             Start a Conversation
           </h2>
-          <p className="font-sans text-[#0C2298] font-light leading-relaxed">
+          <p className="font-sans text-[#0C2298] font-normal leading-relaxed">
             Whether you are navigating a strategic challenge, a leadership transition or are simply curious about how we work, we would welcome a conversation.
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
             {/* Info box */}
             <div className="rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] p-6">
               <p className="font-serif text-lg text-[#0C2298] mb-2">Every engagement is founder-led.</p>
-              <p className="text-sm font-sans text-[#0C2298] font-light leading-relaxed">
+              <p className="text-sm font-sans text-[#0C2298] font-normal leading-relaxed">
                 When you reach out to Insight Vector, you engage directly with senior-level expertise and personalised attention from the first conversation.
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function ContactSection() {
                     <Send size={24} className="text-[#0C2298]" />
                   </div>
                   <h3 className="font-serif text-2xl text-[#0C2298]">Thank you for reaching out.</h3>
-                  <p className="font-sans text-[#0C2298] font-light max-w-sm">
+                  <p className="font-sans text-[#0C2298] font-normal max-w-sm">
                     We will be in touch shortly. Every inquiry is personally reviewed.
                   </p>
                 </motion.div>

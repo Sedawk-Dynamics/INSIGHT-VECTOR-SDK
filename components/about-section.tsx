@@ -73,13 +73,13 @@ export default function AboutSection() {
               </p>
             </motion.blockquote>
 
-            <p className="font-sans text-[#0C2298] leading-relaxed font-light text-lg">
+            <p className="font-sans text-[#0C2298] leading-relaxed font-normal text-lg">
               Founded by Santanu Sengupta — a global business leader, Board Director, strategic advisor
               and ICF-credentialed Executive Coach — Insight Vector brings together over three decades
               of leadership experience across businesses, markets, cultures and transformation journeys.
             </p>
 
-            <p className="font-sans text-[#0C2298] leading-relaxed font-light">
+            <p className="font-sans text-[#0C2298] leading-relaxed font-normal">
               We work across three core areas: strategic advisory, executive coaching and mentoring, and
               leadership development. Across all three, our approach is practical, personalised and
               grounded in real-world experience.

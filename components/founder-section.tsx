@@ -82,7 +82,7 @@ export default function FounderSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="font-sans text-[#0C2298] leading-relaxed font-light"
+                className="font-sans text-[#0C2298] leading-relaxed font-normal"
               >
                 {para}
               </motion.p>
