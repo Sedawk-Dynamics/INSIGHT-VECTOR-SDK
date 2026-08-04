@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond } from 'next/font/google'
+import { Cormorant_Garamond, Poppins } from 'next/font/google'
 import './globals.css'
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -7,6 +7,14 @@ const cormorantGaramond = Cormorant_Garamond({
   weight: ['300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
+  display: 'swap',
+})
+
+// Poppins is used only for the navbar; the rest of the site is Cormorant Garamond.
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins-sans',
   display: 'swap',
 })
 
@@ -49,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorantGaramond.variable} bg-white`}>
+    <html lang="en" className={`${cormorantGaramond.variable} ${poppins.variable} bg-white`}>
       <body className="antialiased font-sans">{children}</body>
     </html>
   )

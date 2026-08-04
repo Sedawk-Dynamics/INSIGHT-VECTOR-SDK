@@ -65,7 +65,7 @@ export default function Navbar() {
                 <button
                   aria-expanded={dropdownOpen}
                   aria-haspopup="true"
-                  className="group relative flex items-center gap-1.5 h-10 px-3 xl:px-3.5 text-[15px] font-medium leading-none whitespace-nowrap text-[#0C2298] hover:text-[#537AED] transition-colors duration-300 ease-out"
+                  className="group relative flex items-center gap-1.5 h-10 px-3 xl:px-3.5 font-poppins text-base font-bold leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
                 >
                   <span>{link.label}</span>
                   <ChevronDown
@@ -73,7 +73,7 @@ export default function Navbar() {
                     strokeWidth={2.25}
                     className={`shrink-0 mt-px transition-transform duration-300 ease-out ${dropdownOpen ? 'rotate-180' : ''}`}
                   />
-                  <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#537AED] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                  <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#0C2298] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                 </button>
                 <AnimatePresence>
                   {dropdownOpen && (
@@ -88,7 +88,7 @@ export default function Navbar() {
                         <Link
                           key={service.label}
                           href={service.href}
-                          className="block px-5 py-2.5 text-[15px] leading-snug text-[#0C2298] hover:bg-[#EEF2FF] hover:text-[#537AED] transition-colors duration-[250ms] ease-out font-medium"
+                          className="block px-5 py-2.5 font-poppins text-base font-bold leading-snug text-black hover:bg-[#EEF2FF] hover:text-[#0C2298] transition-colors duration-[250ms] ease-out"
                         >
                           {service.label}
                         </Link>
@@ -101,10 +101,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative flex items-center h-10 px-3 xl:px-3.5 text-[15px] font-medium leading-none whitespace-nowrap text-[#0C2298] hover:text-[#537AED] transition-colors duration-300 ease-out"
+                className="group relative flex items-center h-10 px-3 xl:px-3.5 font-poppins text-base font-bold leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
               >
                 <span>{link.label}</span>
-                <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#537AED] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#0C2298] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </Link>
             )
           )}
@@ -114,7 +114,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center shrink-0">
           <Link
             href="#contact"
-            className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white text-[15px] font-medium leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
+            className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white font-poppins text-base font-bold leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
           >
             Get in Touch
           </Link>
@@ -146,7 +146,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3.5 text-[15px] font-medium text-[#0C2298] hover:text-[#537AED] border-b border-[#EEF2FF] transition-colors duration-300 ease-out"
+                  className="py-3.5 font-poppins text-base font-bold text-black hover:text-[#0C2298] border-b border-[#EEF2FF] transition-colors duration-300 ease-out"
                 >
                   {link.label}
                 </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
                     key={service.label}
                     href={service.href}
                     onClick={() => setMobileOpen(false)}
-                    className="py-2.5 pl-4 text-[15px] font-medium text-[#537AED] hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                    className="py-2.5 pl-4 font-poppins text-base font-bold text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
                   >
                     {`— ${service.label}`}
                   </Link>
@@ -166,7 +166,7 @@ export default function Navbar() {
               <Link
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 inline-flex items-center justify-center h-11 px-6 bg-[#537AED] text-white text-[15px] font-medium rounded-full hover:bg-[#0C2298] transition-colors duration-300 ease-out"
+                className="mt-4 inline-flex items-center justify-center h-11 px-6 bg-[#537AED] text-white font-poppins text-base font-bold rounded-full hover:bg-[#0C2298] transition-colors duration-300 ease-out"
               >
                 Get in Touch
               </Link>

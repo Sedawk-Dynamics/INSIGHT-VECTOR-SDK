@@ -49,6 +49,9 @@
      Both tokens resolve to it so `font-sans` and `font-serif` render identically. */
   --font-sans: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+
+  /* Poppins is scoped to the navbar via the `font-poppins` utility. */
+  --font-poppins: var(--font-poppins-sans), 'Poppins', sans-serif;
 }
 
 :root {
