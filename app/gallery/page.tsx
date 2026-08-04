@@ -8,19 +8,19 @@ import { ArrowRight, X } from 'lucide-react'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
-// Intrinsic dimensions are declared so the masonry columns reserve the right
-// space and the page does not shift as the images load.
+// Intrinsic dimensions are declared so the lightbox sizes correctly and the
+// page does not shift as the images load.
 const photos = [
-  { src: '/Gallary%20image/1.webp', width: 1080, height: 1350 },
-  { src: '/Gallary%20image/2.webp', width: 800, height: 1000 },
-  { src: '/Gallary%20image/3.webp', width: 800, height: 1192 },
-  { src: '/Gallary%20image/4.webp', width: 1080, height: 1080 },
-  { src: '/Gallary%20image/5.webp', width: 560, height: 576 },
-  { src: '/Gallary%20image/6.webp', width: 1280, height: 853 },
-  { src: '/Gallary%20image/7.webp', width: 1536, height: 1023 },
-  { src: '/Gallary%20image/8.webp', width: 1536, height: 1025 },
-  { src: '/Gallary%20image/9.webp', width: 1269, height: 733 },
-  { src: '/Gallary%20image/10.webp', width: 960, height: 578 },
+  { src: '/Gallary%20image/1.webp', width: 1080, height: 1350, caption: 'Speaker at EON Leadership on Responsible AI' },
+  { src: '/Gallary%20image/2.webp', width: 800, height: 1000, caption: 'Speaker at EnQube Collaboration Viksit Bharat Summit' },
+  { src: '/Gallary%20image/3.webp', width: 800, height: 1192, caption: 'Speaker at Board Stewardship webinar' },
+  { src: '/Gallary%20image/4.webp', width: 1080, height: 1080, caption: 'Speaker at Veblen Boardroom Blueprint workshop' },
+  { src: '/Gallary%20image/5.webp', width: 560, height: 576, caption: 'Jury member at Technoviti 2026 Awards organized by Banking Frontier' },
+  { src: '/Gallary%20image/6.webp', width: 1280, height: 853, caption: 'Speaker at IIT Bombay symposium' },
+  { src: '/Gallary%20image/7.webp', width: 1536, height: 1023, caption: 'Speaker at India Law, Tech & AI summit' },
+  { src: '/Gallary%20image/8.webp', width: 1536, height: 1025, caption: 'Speaker at IMC Chamber of Commerce' },
+  { src: '/Gallary%20image/9.webp', width: 1269, height: 733, caption: 'Speaker at Microsoft forum' },
+  { src: '/Gallary%20image/10.webp', width: 960, height: 578, caption: 'IIT Mumbai guest lecture' },
 ]
 
 export default function GalleryPage() {
@@ -71,12 +71,22 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Uniform grid — every card is the same square tile so rows and columns
-          line up. The photos mix portrait posters with landscape shots, so the
-          image is contained (not cropped) inside the tile: nothing gets cut off
-          and the cards still align. */}
+      {/* Speaking Engagements — every card is the same square tile with the
+          caption beneath, so rows and columns line up. The photos mix portrait
+          posters with landscape shots, so the image is contained (not cropped)
+          inside the tile: nothing gets cut off and the cards still align. */}
       <section className="pb-24 lg:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="font-serif text-3xl lg:text-4xl text-[#0C2298] mb-10"
+          >
+            Speaking Engagements
+          </motion.h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {photos.map((photo, i) => (
               <motion.button
@@ -87,17 +97,22 @@ export default function GalleryPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                aria-label={`View gallery image ${i + 1} larger`}
-                className="group relative block w-full aspect-square overflow-hidden rounded-2xl border border-[#D0DAF8] bg-[#EEF2FF] cursor-pointer hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300"
+                aria-label={`View larger: ${photo.caption}`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D0DAF8] bg-white text-left cursor-pointer hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300"
               >
-                <Image
-                  src={photo.src}
-                  alt={`Insight Vector gallery image ${i + 1}`}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                />
-                <span className="pointer-events-none absolute inset-0 bg-[#0C2298]/0 group-hover:bg-[#0C2298]/10 transition-colors duration-300" />
+                <span className="relative block w-full aspect-square overflow-hidden bg-[#EEF2FF]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  />
+                  <span className="pointer-events-none absolute inset-0 bg-[#0C2298]/0 group-hover:bg-[#0C2298]/10 transition-colors duration-300" />
+                </span>
+                <span className="flex flex-1 items-center px-5 py-4 border-t border-[#D0DAF8] font-sans text-base text-[#0C2298] leading-snug">
+                  {photo.caption}
+                </span>
               </motion.button>
             ))}
           </div>
@@ -108,19 +123,21 @@ export default function GalleryPage() {
       <section className="pb-24 lg:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="rounded-3xl bg-[#0C2298] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div>
+            <div className="max-w-2xl">
               <h2 className="font-serif text-3xl lg:text-4xl text-white mb-3 text-balance">
-                Connect for Strategic Conversations.
+                Open to Meaningful Conversations Around Governance, Leadership &amp; Strategic
+                Transformation
               </h2>
               <p className="font-sans text-white/60 font-normal">
-                Speaking, panels and advisory enquiries are always welcome.
+                For board roles, advisory mandates, or executive coaching &amp; mentoring and
+                speaking engagements, you may reach out directly.
               </p>
             </div>
             <Link
               href="/#contact"
               className="shrink-0 inline-flex items-center gap-2 px-10 py-4 bg-[#537AED] text-white font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
             >
-              Get in Touch <ArrowRight size={16} />
+              Connect for Strategic Conversations <ArrowRight size={16} />
             </Link>
           </div>
         </div>
