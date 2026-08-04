@@ -20,7 +20,7 @@ const footerLinks = {
   ],
   Resources: [
     { label: 'Featured Insights', href: '#insights' },
-    { label: 'Media & Gallery', href: '#insights' },
+    { label: 'Media & Gallery', href: '/gallery' },
     { label: 'Events', href: '#contact' },
     { label: 'Newsletter', href: '#contact' },
   ],
