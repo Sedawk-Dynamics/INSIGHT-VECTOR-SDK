@@ -65,7 +65,7 @@ export default function Navbar() {
                 <button
                   aria-expanded={dropdownOpen}
                   aria-haspopup="true"
-                  className="group relative flex items-center gap-1.5 h-10 px-3 xl:px-3.5 font-poppins text-base font-bold leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                  className="group relative flex items-center gap-1.5 h-10 px-3 xl:px-3.5 font-poppins text-base font-normal leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
                 >
                   <span>{link.label}</span>
                   <ChevronDown
@@ -88,7 +88,7 @@ export default function Navbar() {
                         <Link
                           key={service.label}
                           href={service.href}
-                          className="block px-5 py-2.5 font-poppins text-base font-bold leading-snug text-black hover:bg-[#EEF2FF] hover:text-[#0C2298] transition-colors duration-[250ms] ease-out"
+                          className="block px-5 py-2.5 font-poppins text-base font-normal leading-snug text-black hover:bg-[#EEF2FF] hover:text-[#0C2298] transition-colors duration-[250ms] ease-out"
                         >
                           {service.label}
                         </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative flex items-center h-10 px-3 xl:px-3.5 font-poppins text-base font-bold leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                className="group relative flex items-center h-10 px-3 xl:px-3.5 font-poppins text-base font-normal leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
               >
                 <span>{link.label}</span>
                 <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#0C2298] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
@@ -146,7 +146,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3.5 font-poppins text-base font-bold text-black hover:text-[#0C2298] border-b border-[#EEF2FF] transition-colors duration-300 ease-out"
+                  className="py-3.5 font-poppins text-base font-normal text-black hover:text-[#0C2298] border-b border-[#EEF2FF] transition-colors duration-300 ease-out"
                 >
                   {link.label}
                 </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
                     key={service.label}
                     href={service.href}
                     onClick={() => setMobileOpen(false)}
-                    className="py-2.5 pl-4 font-poppins text-base font-bold text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                    className="py-2.5 pl-4 font-poppins text-base font-normal text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
                   >
                     {`— ${service.label}`}
                   </Link>
