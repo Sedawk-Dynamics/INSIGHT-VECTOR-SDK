@@ -12,10 +12,11 @@ const cormorantGaramond = Cormorant_Garamond({
   display: 'swap',
 })
 
-// Poppins is used only for the navbar; the rest of the site is Cormorant Garamond.
+// Poppins carries body copy, UI and the navbar.
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-poppins-sans',
   display: 'swap',
 })

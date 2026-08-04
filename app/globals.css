@@ -45,13 +45,13 @@
   --color-brand-navy: #081860;
   --color-brand-light: #EEF2FF;
 
-  /* Cormorant Garamond is the single typeface across the entire site.
-     Both tokens resolve to it so `font-sans` and `font-serif` render identically. */
-  --font-sans: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  /* Poppins carries body copy and UI; Cormorant Garamond is the display face
+     for headings and pull quotes. Cormorant's small x-height makes it read
+     smaller than its pixel size, so it is not used for running text. */
+  --font-sans: var(--font-poppins-sans), 'Poppins', system-ui, sans-serif;
   --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
 
-  /* Poppins is scoped to the navbar via the `font-poppins` utility. */
-  --font-poppins: var(--font-poppins-sans), 'Poppins', sans-serif;
+  --font-poppins: var(--font-poppins-sans), 'Poppins', system-ui, sans-serif;
 
   /* 16px is the minimum font size site-wide. The two smallest steps in the
      scale are clamped to 1rem so no utility can render below it. */
@@ -101,10 +101,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-  /* Every element — headings, body copy, form controls, buttons — uses Cormorant Garamond. */
-  h1, h2, h3, h4, h5, h6,
-  input, textarea, select, button {
+  /* Headings are the display face; form controls follow body copy. */
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
+  }
+  input, textarea, select, button {
+    font-family: var(--font-sans);
   }
 }
 
