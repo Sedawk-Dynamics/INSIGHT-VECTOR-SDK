@@ -23,6 +23,80 @@ const photos = [
   { src: '/Gallary%20image/10.webp', width: 960, height: 578, caption: 'IIT Mumbai guest lecture' },
 ]
 
+// Interviews and press. `href` opens the original article on the publisher's
+// own site, so each card credits and links back to the source.
+const mediaCoverage = [
+  {
+    title: 'Post-Budget conversation with NDTV',
+    tagline: 'Central Takeaway: This is a Budget driven by Structural Intent',
+    publication: 'NDTV',
+    image: '/media/ndtv-budget.jpg',
+    href: 'https://santanusengupta.com/wp-content/uploads/2026/05/NDTV-Budget-Video-1.mp4',
+  },
+  {
+    title: 'Indo-US deal: Not just a tariff reset',
+    publication: 'Sunday Pioneer',
+    image: '/media/indo-us-tariff-reset.jpg',
+    href: 'https://dailypioneer.com/news/indo-us-deal-not-just-a-tariff-reset',
+  },
+  {
+    title: 'The ESG Imperative meets AI Revolution',
+    publication: 'Director Today',
+    image: '/media/ai-esg-cyber.jpg',
+    href: 'https://www.iodglobal.com/blog/details/ais-role-in-esg-oversight-from-rear-view-to-radar',
+  },
+  {
+    title: 'When AI meets cyber risk',
+    publication: 'ET Wealth / ET Insights',
+    image: '/media/ai-esg-cyber.jpg',
+    href: 'https://etedge-insights.com/technology/cyber-security/when-ai-meets-cyber-risk-why-the-boardroom-is-now-the-front-line/',
+  },
+  {
+    title: 'RBI acts on fraud',
+    publication: 'ET Wealth',
+    image: '/media/rbi-fraud.jpg',
+    href: 'https://economictimes.indiatimes.com/wealth/save/rbi-acts-on-fraud-customers-to-get-up-to-rs-25000-compensation-for-losses-incurred-in-small-value-fraudulent-transactions-announces-rbi/articleshow/127970319.cms',
+  },
+  {
+    title: 'Views of Mr Santanu Sengupta on India–US trade deal',
+    publication: 'Fortune India',
+    image: '/media/fortune-india-trade.png',
+    href: 'https://www.fortuneindia.com/economy/us-lowers-tariffs-on-indian-imports-to-18-heres-the-timeline-of-key-events/130036',
+  },
+  {
+    title: 'India–US trade deal',
+    publication: 'ET BFSI',
+    image: '/media/santanu-portrait.jpg',
+    href: 'https://bfsi.economictimes.indiatimes.com/articles/tariff-reset-with-us-lifts-indias-export-competitiveness-revives-fii-and-fdi-sentiment-analysts/127882174',
+  },
+  {
+    title: 'Interview with EnterpriseZone.cc',
+    publication: 'EnterpriseZone.cc',
+    image: '/media/santanu-portrait.jpg',
+    href: 'https://enterprisezone.cc/santanu-sengupta-board-director-i-former-md-head-apac-south-wells-fargo-bank/',
+  },
+  {
+    title: 'Interview with Bloggers Alliance',
+    tagline: 'A conversation with Santanu Sengupta on global banking, board stewardship & AI',
+    publication: 'Bloggers Alliance',
+    image: '/media/bloggers-alliance.webp',
+    href: 'https://bloggersalliance.medium.com/santanu-sengupta-from-global-banking-to-boardrooms-47ef7985ee02',
+  },
+  {
+    title: 'Zeron appoints Santanu Sengupta as President & CGSO',
+    publication: 'People Matters',
+    image: '/media/zeron-logo.jpg',
+    href: 'https://www.peoplematters.in/news/appointments/former-wells-fargo-executive-santanu-sengupta-joins-zeron-as-president-41334',
+  },
+  {
+    title: 'Nexus Global Advisory Board appointment',
+    tagline: 'Nexus has the potential to connect capital, innovators and enterprises',
+    publication: 'LinkedIn',
+    image: '/media/nexus-advisory.jpg',
+    href: 'https://www.linkedin.com/posts/santanu-sengupta_nexus-europe-appoints-advisory-board-to-scale-activity-7435895327745925120-Rg06',
+  },
+]
+
 export default function GalleryPage() {
   const [lightbox, setLightbox] = useState<number | null>(null)
   const close = useCallback(() => setLightbox(null), [])
@@ -114,6 +188,68 @@ export default function GalleryPage() {
                   {photo.caption}
                 </span>
               </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interviews & Media Coverage */}
+      <section className="py-20 lg:py-24 bg-[#EEF2FF]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="font-serif text-3xl lg:text-4xl text-[#0C2298] mb-10"
+          >
+            Interviews &amp; Media Coverage
+          </motion.h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mediaCoverage.map((item, i) => (
+              <motion.a
+                key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.6, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300"
+              >
+                <span className="relative block w-full aspect-video overflow-hidden bg-[#EEF2FF]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                  />
+                </span>
+
+                <span className="flex flex-1 flex-col p-5 border-t border-[#D0DAF8]">
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#0C2298] mb-2">
+                    {item.publication}
+                  </span>
+                  <span className="font-serif text-xl text-[#0C2298] leading-snug mb-2">
+                    {item.title}
+                  </span>
+                  {item.tagline && (
+                    <span className="font-sans text-base text-[#0C2298] leading-relaxed mb-4">
+                      {item.tagline}
+                    </span>
+                  )}
+                  <span className="mt-auto inline-flex items-center gap-2 text-base font-semibold text-[#0C2298]">
+                    Read more
+                    <ArrowRight
+                      size={15}
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </span>
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>
