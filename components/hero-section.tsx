@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, TrendingUp, Globe } from 'lucide-react'
-import HeroStats from '@/components/hero-stats'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -137,9 +136,6 @@ export default function HeroSection() {
                 Explore Services
               </Link>
             </motion.div>
-
-            {/* Hero stat boxes */}
-            <HeroStats className="pt-4 border-t border-[#D0DAF8]" />
           </div>
 
           {/* Right: Image with floating cards */}
