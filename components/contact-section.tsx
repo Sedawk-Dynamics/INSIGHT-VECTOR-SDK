@@ -32,7 +32,7 @@ export default function ContactSection() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-            Get in Touch
+            Partner with Us
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-4 text-balance">
             Start a Conversation

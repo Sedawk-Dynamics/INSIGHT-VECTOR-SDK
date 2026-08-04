@@ -115,10 +115,10 @@ export default function ServicesSection() {
                   ))}
                 </div>
 
-                {/* Link */}
+                {/* Link — each card opens its own service page */}
                 <Link
-                  href="#contact"
-                  className="flex items-center gap-2 text-sm font-semibold text-[#0C2298] hover:text-[#0C2298] transition-colors duration-200 group/link"
+                  href={`/${service.id}`}
+                  className="flex items-center gap-2 text-sm font-semibold text-[#0C2298] hover:text-[#537AED] transition-colors duration-200 group/link"
                 >
                   Learn More
                   <ArrowRight

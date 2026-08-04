@@ -68,20 +68,22 @@ export default function HeroSection() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-[#0C2298] text-balance"
+              /* Sized with a viewport-relative clamp so "Clarity for Complexity."
+                 always fits on a single line, at every width. */
+              className="font-serif text-[clamp(1.75rem,4.2vw,3.25rem)] leading-[1.15] text-[#0C2298]"
             >
-              Clarity for{' '}
-              <span className="text-[#0C2298]">Complexity.</span>
-              <br />
-              Direction for{' '}
-              <span className="relative inline-block">
-                What Comes Next.
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#537AED] origin-left"
-                />
+              <span className="block whitespace-nowrap">Clarity for Complexity.</span>
+              <span className="block">
+                Direction for{' '}
+                <span className="relative inline-block">
+                  What Comes Next.
+                  <motion.span
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#537AED] origin-left"
+                  />
+                </span>
               </span>
             </motion.h1>
 
@@ -126,7 +128,7 @@ export default function HeroSection() {
                 href="#contact"
                 className="group flex items-center gap-2 px-8 py-4 bg-[#0C2298] text-white font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-lg hover:shadow-[0_8px_30px_rgba(83,122,237,0.4)]"
               >
-                Get in Touch
+                Partner with Us
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link

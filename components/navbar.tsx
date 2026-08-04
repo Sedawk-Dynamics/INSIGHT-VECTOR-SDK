@@ -118,7 +118,7 @@ export default function Navbar() {
             href="/#contact"
             className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white font-poppins text-base font-bold leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
           >
-            Get in Touch
+            Partner with Us
           </Link>
         </div>
 
@@ -170,7 +170,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 inline-flex items-center justify-center h-11 px-6 bg-[#537AED] text-white font-poppins text-base font-bold rounded-full hover:bg-[#0C2298] transition-colors duration-300 ease-out"
               >
-                Get in Touch
+                Partner with Us
               </Link>
             </div>
           </motion.div>

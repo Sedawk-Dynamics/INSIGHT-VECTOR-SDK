@@ -5,7 +5,6 @@ import ServicesSection from '@/components/services-section'
 import ValuesSection from '@/components/values-section'
 import FounderSection from '@/components/founder-section'
 import WhyChooseSection from '@/components/why-choose-section'
-import InsightsSection from '@/components/insights-section'
 import ContactSection from '@/components/contact-section'
 import Footer from '@/components/footer'
 
@@ -20,8 +19,8 @@ export default function Home() {
       <ValuesSection />
       <FounderSection />
       <WhyChooseSection />
-      
-      <InsightsSection />
+      {/* Featured Insights is intentionally not rendered.
+          The section component still lives at components/insights-section.tsx. */}
       <ContactSection />
       <Footer />
     </main>
