@@ -8,8 +8,8 @@ import { ChevronDown, Menu, X } from 'lucide-react'
 
 const services = [
   { label: 'Strategic Advisory', href: '/strategic-advisory' },
-  { label: 'Executive Coaching', href: '/#executive-coaching' },
-  { label: 'Leadership Development', href: '/#leadership-development' },
+  { label: 'Executive Coaching', href: '/executive-coaching' },
+  { label: 'Leadership Development', href: '/leadership-development' },
 ]
 
 // Section links are rooted at "/" so they still work from /gallery and

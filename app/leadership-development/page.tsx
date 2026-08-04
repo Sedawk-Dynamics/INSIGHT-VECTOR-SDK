@@ -6,16 +6,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import HeroStats from '@/components/hero-stats'
-import {
-  TrendingUp,
-  Globe,
-  DollarSign,
-  BarChart2,
-  Shield,
-  Users,
-  ArrowRight,
-  CheckCircle2,
-} from 'lucide-react'
+import { ArrowRight, Brain, CheckCircle2, Leaf, ShieldAlert, Users } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -26,77 +17,62 @@ const fadeUp = {
   }),
 }
 
-const services = [
-  {
-    icon: TrendingUp,
-    title: 'Business Strategy & Growth',
-    description:
-      'Craft robust growth strategies that align with your vision, market position, and competitive landscape — built for sustainable, long-term value creation.',
-  },
-  {
-    icon: Globe,
-    title: 'Scaling & International Expansion',
-    description:
-      'Navigate the complexities of scaling operations and entering new markets with a structured playbook grounded in global execution experience.',
-  },
-  {
-    icon: DollarSign,
-    title: 'Capital Strategy & Fundraising',
-    description:
-      'Define the right capital structure, identify the right investors, and lead compelling fundraising narratives that convert interest into commitment.',
-  },
-  {
-    icon: BarChart2,
-    title: 'Investor Readiness',
-    description:
-      'Position your business for institutional scrutiny — from financial modelling and due diligence preparation to board-ready governance frameworks.',
-  },
-  {
-    icon: Shield,
-    title: 'Governance & Institutionalisation',
-    description:
-      'Build the systems, structures and processes that transform an entrepreneurial venture into a resilient, scalable institution.',
-  },
+const capabilities = [
   {
     icon: Users,
-    title: 'Board & Leadership Advisory',
+    title: 'Leadership & Executive Effectiveness',
     description:
-      'Bring independent, experienced judgment to the boardroom and leadership team at pivotal moments of growth, transition and transformation.',
+      'Strengthening strategic thinking, decision-making, stakeholder influence and the personal effectiveness of leaders at every level.',
+  },
+  {
+    icon: ShieldAlert,
+    title: 'Integrated Risk Management',
+    description:
+      'Connecting strategy, growth and risk so leaders can pursue opportunity while building genuine organisational resilience.',
+  },
+  {
+    icon: Leaf,
+    title: 'ESG & Sustainability',
+    description:
+      'Moving beyond reporting obligations to embed sustainability into strategy, governance and long-term value creation.',
+  },
+  {
+    icon: Brain,
+    title: 'Responsible AI',
+    description:
+      'Equipping boards, leaders and organisations to navigate AI governance, strategy and responsible deployment.',
   },
 ]
 
 const whoWeWorkWith = [
-  'Founders',
-  'Small & Medium Business Owners',
-  'Growth-Stage Companies',
-  'Family Businesses',
-  'CEOs & Leadership Teams',
+  'Founders & Business Owners',
+  'CXOs & Senior Leadership Teams',
+  'High-Potential Leaders',
+  'Organisations Building Leadership Capability',
 ]
 
-export default function StrategicAdvisoryPage() {
+export default function LeadershipDevelopmentPage() {
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="bg-white">
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-0 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#EEF2FF] via-white to-white pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center pb-20">
-            {/* Left */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-white to-white pt-32 lg:pt-40">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <motion.div
+              <motion.span
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
                 custom={0}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#537AED]/10 border border-[#537AED]/20 mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-[#537AED]/10 border border-[#537AED]/20"
               >
                 <span className="w-2 h-2 rounded-full bg-[#537AED]" />
                 <span className="text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
-                  Strategic Advisory
+                  Leadership Development for Organisations
                 </span>
-              </motion.div>
+              </motion.span>
 
               <motion.h1
                 variants={fadeUp}
@@ -105,8 +81,8 @@ export default function StrategicAdvisoryPage() {
                 custom={1}
                 className="font-serif text-5xl lg:text-6xl font-semibold text-[#0C2298] leading-[1.1] text-balance mb-6"
               >
-                Scale with Clarity.{' '}
-                <span className="text-[#0C2298]">Grow with Discipline.</span>
+                Developing Leaders for a{' '}
+                <span className="text-[#537AED]">More Complex World.</span>
               </motion.h1>
 
               <motion.p
@@ -114,12 +90,11 @@ export default function StrategicAdvisoryPage() {
                 initial="hidden"
                 animate="visible"
                 custom={2}
-                className="text-lg text-[#0C2298] leading-relaxed mb-8 text-pretty"
+                className="text-lg text-[#0C2298] leading-relaxed mb-6 text-pretty"
               >
-                Growth creates opportunity. It also creates complexity. We help founders and business
-                owners make better strategic decisions at every stage of growth — from scaling
-                operations and entering new markets to raising capital, strengthening governance and
-                building resilient businesses.
+                Today&apos;s leaders face a very different business landscape. AI, cyber risk, ESG,
+                geopolitical uncertainty and rising stakeholder expectations demand stronger
+                judgement, better decision-making and more resilient leadership.
               </motion.p>
 
               <motion.p
@@ -129,9 +104,9 @@ export default function StrategicAdvisoryPage() {
                 custom={3}
                 className="text-base text-[#0C2298] leading-relaxed mb-10 text-pretty"
               >
-                Grounded in over three decades of global leadership across banking, strategy, growth,
-                risk and Board advisory, we bring an independent, institutional perspective to
-                entrepreneurial ambition.
+                Insight Vector helps organisations develop future-ready leaders through practical,
+                executive-level programmes grounded in over three decades of global leadership
+                experience across strategy, risk, governance and Board advisory.
               </motion.p>
 
               <motion.div
@@ -142,24 +117,23 @@ export default function StrategicAdvisoryPage() {
                 className="flex flex-wrap gap-4"
               >
                 <Link
-                  href="#contact-us"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0C2298] text-white text-sm font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-md hover:shadow-[0_4px_20px_rgba(83,122,237,0.4)]"
+                  href="/#contact"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0C2298] text-white text-base font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-md hover:shadow-[0_4px_20px_rgba(83,122,237,0.4)]"
                 >
                   Partner with Us <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="/#services"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#0C2298] text-[#0C2298] text-sm font-semibold rounded-full hover:border-[#537AED] hover:text-[#0C2298] transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#0C2298] text-[#0C2298] text-base font-semibold rounded-full hover:border-[#537AED] hover:text-[#537AED] transition-all duration-300"
                 >
                   All Services
                 </Link>
               </motion.div>
 
-              {/* Hero stat boxes */}
               <HeroStats className="mt-10 pt-8 border-t border-[#D0DAF8]" />
             </div>
 
-            {/* Right — image */}
+            {/* Right — portrait */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -167,12 +141,13 @@ export default function StrategicAdvisoryPage() {
               custom={2}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                 <Image
-                  src="/strategy-session.png"
-                  alt="Strategic advisory session"
+                  src="/founder-portrait.jpg"
+                  alt="Santanu Sengupta — Founder, Insight Vector"
                   fill
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-cover object-top"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C2298]/30 to-transparent" />
@@ -189,7 +164,7 @@ export default function StrategicAdvisoryPage() {
         </div>
       </section>
 
-      {/* Where We Add Value */}
+      {/* Where We Build Capability */}
       <section className="py-24 bg-[#F8FAFF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -200,17 +175,17 @@ export default function StrategicAdvisoryPage() {
             className="text-center mb-16"
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
-              Our Expertise
+              Our Programmes
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] text-balance">
-              Where We Add Value
+              Where We Build Capability
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, i) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {capabilities.map((item, i) => (
               <motion.div
-                key={service.title}
+                key={item.title}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -219,23 +194,55 @@ export default function StrategicAdvisoryPage() {
                 className="group bg-white rounded-2xl p-8 border border-[#E8EEFF] hover:border-[#537AED]/40 hover:shadow-[0_8px_32px_rgba(83,122,237,0.12)] transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#537AED]/10 flex items-center justify-center mb-5 group-hover:bg-[#537AED] transition-colors duration-300">
-                  <service.icon
+                  <item.icon
                     size={22}
-                    className="text-[#0C2298] group-hover:text-white transition-colors duration-300"
+                    className="text-[#537AED] group-hover:text-white transition-colors duration-300"
                   />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-[#0C2298] mb-3 leading-snug">
-                  {service.title}
+                  {item.title}
                 </h3>
-                <p className="text-sm text-[#0C2298] leading-relaxed">{service.description}</p>
+                <p className="text-base text-[#0C2298] leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* The Insight Vector Difference */}
+      {/* Our Approach */}
       <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
+              How We Work
+            </p>
+            <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] mb-8 text-balance">
+              Our Approach
+            </h2>
+            <p className="text-lg text-[#0C2298] leading-relaxed mb-5 text-pretty">
+              Every programme is tailored to your organisation&apos;s strategic priorities, industry
+              context and leadership challenges.
+            </p>
+            <p className="text-base text-[#0C2298] leading-relaxed mb-5 text-pretty">
+              We combine practical experience with contemporary thinking to help leaders strengthen
+              strategic thinking, decision-making, stakeholder influence and organisational
+              resilience.
+            </p>
+            <p className="text-base text-[#0C2298] leading-relaxed text-pretty">
+              Programmes are interactive, discussion-led and designed to deliver practical outcomes,
+              not just theoretical knowledge.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Insight Vector Difference */}
+      <section className="py-24 bg-[#F8FAFF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -250,12 +257,13 @@ export default function StrategicAdvisoryPage() {
                   src="/founder-portrait.jpg"
                   alt="Santanu Sengupta — Founder, Insight Vector"
                   fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C2298]/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="font-serif text-white text-lg font-semibold">Santanu Sengupta</p>
-                  <p className="text-[#A8C0FF] text-sm">Founder, Insight Vector</p>
+                  <p className="text-[#A8C0FF] text-base">Founder, Insight Vector</p>
                 </div>
               </div>
             </motion.div>
@@ -282,12 +290,9 @@ export default function StrategicAdvisoryPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={1}
-                className="text-base text-[#0C2298] leading-relaxed mb-5 text-pretty"
+                className="text-lg text-[#0C2298] leading-relaxed mb-5 text-pretty"
               >
-                Our advice is shaped by experience, not theory. Our founder, Santanu Sengupta, has
-                spent more than three decades leading businesses, strategy, risk and transformation
-                across global financial institutions before advising founders and growth-stage
-                companies on scaling, fundraising, governance and international expansion.
+                Our programmes are shaped by experience, not theory.
               </motion.p>
 
               <motion.p
@@ -296,14 +301,24 @@ export default function StrategicAdvisoryPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={2}
+                className="text-base text-[#0C2298] leading-relaxed mb-5 text-pretty"
+              >
+                Our founder Santanu Sengupta brings over three decades of global leadership across
+                banking, strategy, growth, enterprise risk management and Board advisory, combined
+                with contemporary expertise in AI governance, cyber resilience, ESG and Board
+                advisory.
+              </motion.p>
+
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={3}
                 className="text-base text-[#0C2298] leading-relaxed mb-8 text-pretty"
               >
-                As President &amp; Chief Growth &amp; Strategy Officer at a leading cyber risk
-                management start-up, he led client acquisition, business growth, international
-                expansion and funding rounds, while helping drive engagement with regulators and
-                Boards on data-driven Cyber Risk frameworks. This unique combination of corporate
-                leadership, Board experience and startup execution enables us to help businesses
-                scale with greater clarity, discipline and confidence.
+                The result is learning that is practical, relevant and immediately applicable to
+                today&apos;s business realities.
               </motion.p>
 
               <motion.blockquote
@@ -311,19 +326,11 @@ export default function StrategicAdvisoryPage() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                custom={3}
+                custom={4}
                 className="border-l-4 border-[#537AED] pl-5 py-1"
               >
                 <p className="font-serif text-xl text-[#0C2298] italic leading-relaxed">
                   &ldquo;Clarity in Complexity. Direction for What Comes Next.&rdquo;
-                </p>
-                <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-base font-medium tracking-wide text-[#0C2298]">
-                  {['Strategy', 'Growth', 'Risk', 'Leadership'].map((pillar, i) => (
-                    <span key={pillar} className="flex items-center gap-x-3">
-                      {i > 0 && <span aria-hidden="true" className="text-[#0C2298]">|</span>}
-                      {pillar}
-                    </span>
-                  ))}
                 </p>
               </motion.blockquote>
             </div>
@@ -347,10 +354,6 @@ export default function StrategicAdvisoryPage() {
               <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-white mb-6 text-balance">
                 Who We Work With
               </h2>
-              <p className="text-[#A8C0FF] text-base leading-relaxed mb-8 text-pretty">
-                We partner with ambitious leaders and organisations at critical inflection points —
-                where clarity of strategy and quality of advice can make all the difference.
-              </p>
               <ul className="space-y-4">
                 {whoWeWorkWith.map((item, i) => (
                   <motion.li
@@ -369,7 +372,6 @@ export default function StrategicAdvisoryPage() {
               </ul>
             </motion.div>
 
-            {/* CTA card */}
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -379,15 +381,19 @@ export default function StrategicAdvisoryPage() {
               className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20"
             >
               <h3 className="font-serif text-3xl font-semibold text-white mb-4 text-balance">
-                Better decisions build stronger businesses.
+                Better Leaders. Stronger Organisations.
               </h3>
+              <p className="text-[#A8C0FF] text-base leading-relaxed mb-3">
+                Leadership capability is no longer a competitive advantage — it is a business
+                imperative.
+              </p>
               <p className="text-[#A8C0FF] text-base leading-relaxed mb-8">
-                Let&apos;s navigate your next stage of growth together. Clarity in Complexity.
-                Direction for What Comes Next.
+                We help leaders and organisations build the judgement, capabilities and confidence
+                to navigate growth, complexity and transformation.
               </p>
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-sm font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-base font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
               >
                 Let&apos;s Talk <ArrowRight size={16} />
               </Link>

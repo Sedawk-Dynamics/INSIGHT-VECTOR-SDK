@@ -6,23 +6,23 @@ import { socialLinks } from '@/components/social-icons'
 
 const footerLinks = {
   Company: [
-    { label: 'About Insight Vector', href: '#about' },
-    { label: 'Our Founder', href: '#founder' },
-    { label: 'Our Values', href: '#about' },
-    { label: 'Why Choose Us', href: '#about' },
+    { label: 'About Insight Vector', href: '/#about' },
+    { label: 'Our Founder', href: '/#founder' },
+    { label: 'Our Values', href: '/#about' },
+    { label: 'Why Choose Us', href: '/#about' },
   ],
   Services: [
-    { label: 'Strategic Advisory', href: '#strategic-advisory' },
-    { label: 'Executive Coaching', href: '#executive-coaching' },
-    { label: 'Leadership Development', href: '#leadership-development' },
-    { label: 'Integrated Risk', href: '#services' },
-    { label: 'Responsible AI', href: '#services' },
+    { label: 'Strategic Advisory', href: '/strategic-advisory' },
+    { label: 'Executive Coaching', href: '/executive-coaching' },
+    { label: 'Leadership Development', href: '/leadership-development' },
+    { label: 'Integrated Risk', href: '/#services' },
+    { label: 'Responsible AI', href: '/#services' },
   ],
   Resources: [
-    { label: 'Featured Insights', href: '#insights' },
+    { label: 'Featured Insights', href: '/#insights' },
     { label: 'Media & Gallery', href: '/gallery' },
-    { label: 'Events', href: '#contact' },
-    { label: 'Newsletter', href: '#contact' },
+    { label: 'Events', href: '/#contact' },
+    { label: 'Newsletter', href: '/#contact' },
   ],
 }
 

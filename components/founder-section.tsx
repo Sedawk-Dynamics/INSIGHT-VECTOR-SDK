@@ -31,7 +31,7 @@ export default function FounderSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.14)]">
               <Image
-                src="/founder-portrait.png"
+                src="/founder-portrait.jpg"
                 alt="Santanu Sengupta, Founder of Insight Vector"
                 width={480}
                 height={600}
