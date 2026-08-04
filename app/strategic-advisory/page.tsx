@@ -93,7 +93,7 @@ export default function StrategicAdvisoryPage() {
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#537AED]/10 border border-[#537AED]/20 mb-6"
               >
                 <span className="w-2 h-2 rounded-full bg-[#537AED]" />
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#537AED]">
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
                   Strategic Advisory
                 </span>
               </motion.div>
@@ -106,7 +106,7 @@ export default function StrategicAdvisoryPage() {
                 className="font-serif text-5xl lg:text-6xl font-semibold text-[#0C2298] leading-[1.1] text-balance mb-6"
               >
                 Scale with Clarity.{' '}
-                <span className="text-[#537AED]">Grow with Discipline.</span>
+                <span className="text-[#0C2298]">Grow with Discipline.</span>
               </motion.h1>
 
               <motion.p
@@ -114,7 +114,7 @@ export default function StrategicAdvisoryPage() {
                 initial="hidden"
                 animate="visible"
                 custom={2}
-                className="text-lg text-[#4A5568] leading-relaxed mb-8 text-pretty"
+                className="text-lg text-[#0C2298] leading-relaxed mb-8 text-pretty"
               >
                 Growth creates opportunity. It also creates complexity. We help founders and business
                 owners make better strategic decisions at every stage of growth — from scaling
@@ -127,7 +127,7 @@ export default function StrategicAdvisoryPage() {
                 initial="hidden"
                 animate="visible"
                 custom={3}
-                className="text-base text-[#4A5568] leading-relaxed mb-10 text-pretty"
+                className="text-base text-[#0C2298] leading-relaxed mb-10 text-pretty"
               >
                 Grounded in over three decades of global leadership across banking, strategy, growth,
                 risk and Board advisory, we bring an independent, institutional perspective to
@@ -149,7 +149,7 @@ export default function StrategicAdvisoryPage() {
                 </Link>
                 <Link
                   href="/#services"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#0C2298] text-[#0C2298] text-sm font-semibold rounded-full hover:border-[#537AED] hover:text-[#537AED] transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#0C2298] text-[#0C2298] text-sm font-semibold rounded-full hover:border-[#537AED] hover:text-[#0C2298] transition-all duration-300"
                 >
                   All Services
                 </Link>
@@ -199,7 +199,7 @@ export default function StrategicAdvisoryPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#537AED] mb-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
               Our Expertise
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] text-balance">
@@ -221,13 +221,13 @@ export default function StrategicAdvisoryPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#537AED]/10 flex items-center justify-center mb-5 group-hover:bg-[#537AED] transition-colors duration-300">
                   <service.icon
                     size={22}
-                    className="text-[#537AED] group-hover:text-white transition-colors duration-300"
+                    className="text-[#0C2298] group-hover:text-white transition-colors duration-300"
                   />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-[#0C2298] mb-3 leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[#4A5568] leading-relaxed">{service.description}</p>
+                <p className="text-sm text-[#0C2298] leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -268,7 +268,7 @@ export default function StrategicAdvisoryPage() {
                 viewport={{ once: true }}
                 custom={0}
               >
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#537AED] mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
                   Our Edge
                 </p>
                 <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] mb-6 text-balance">
@@ -282,7 +282,7 @@ export default function StrategicAdvisoryPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={1}
-                className="text-base text-[#4A5568] leading-relaxed mb-5 text-pretty"
+                className="text-base text-[#0C2298] leading-relaxed mb-5 text-pretty"
               >
                 Our advice is shaped by experience, not theory. Our founder, Santanu Sengupta, has
                 spent more than three decades leading businesses, strategy, risk and transformation
@@ -296,7 +296,7 @@ export default function StrategicAdvisoryPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={2}
-                className="text-base text-[#4A5568] leading-relaxed mb-8 text-pretty"
+                className="text-base text-[#0C2298] leading-relaxed mb-8 text-pretty"
               >
                 As President &amp; Chief Growth &amp; Strategy Officer at a leading cyber risk
                 management start-up, he led client acquisition, business growth, international
@@ -317,10 +317,10 @@ export default function StrategicAdvisoryPage() {
                 <p className="font-serif text-xl text-[#0C2298] italic leading-relaxed">
                   &ldquo;Clarity in Complexity. Direction for What Comes Next.&rdquo;
                 </p>
-                <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-base font-medium tracking-wide text-[#537AED]">
+                <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-base font-medium tracking-wide text-[#0C2298]">
                   {['Strategy', 'Growth', 'Risk', 'Leadership'].map((pillar, i) => (
                     <span key={pillar} className="flex items-center gap-x-3">
-                      {i > 0 && <span aria-hidden="true" className="text-[#537AED]/40">|</span>}
+                      {i > 0 && <span aria-hidden="true" className="text-[#0C2298]">|</span>}
                       {pillar}
                     </span>
                   ))}
@@ -362,7 +362,7 @@ export default function StrategicAdvisoryPage() {
                     custom={i * 0.5}
                     className="flex items-center gap-3"
                   >
-                    <CheckCircle2 size={20} className="text-[#537AED] shrink-0" />
+                    <CheckCircle2 size={20} className="text-[#A8C0FF] shrink-0" />
                     <span className="text-white font-medium">{item}</span>
                   </motion.li>
                 ))}

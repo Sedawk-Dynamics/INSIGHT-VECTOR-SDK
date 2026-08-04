@@ -49,8 +49,8 @@ export default function FounderSection() {
               className="absolute -bottom-6 left-8 right-8 bg-white rounded-2xl shadow-[0_8px_40px_rgba(83,122,237,0.18)] border border-[#D0DAF8] p-5"
             >
               <p className="font-serif text-xl text-[#0C2298]">Santanu Sengupta</p>
-              <p className="text-sm text-[#537AED] font-medium font-sans">Founder, Insight Vector</p>
-              <p className="text-xs text-[#0C2298]/50 font-sans mt-1">
+              <p className="text-sm text-[#0C2298] font-medium font-sans">Founder, Insight Vector</p>
+              <p className="text-xs text-[#0C2298] font-sans mt-1">
                 Former MD & APAC Business Leader · ICF-Credentialed Executive Coach · Board Director
               </p>
             </motion.div>
@@ -65,7 +65,7 @@ export default function FounderSection() {
             className="lg:col-span-3 space-y-6 pt-0 lg:pt-4"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Quote size={28} className="text-[#537AED]" />
+              <Quote size={28} className="text-[#0C2298]" />
               <span className="font-serif text-2xl text-[#0C2298] italic">Insight matters. But what we do with it matters more.</span>
             </div>
 
@@ -82,7 +82,7 @@ export default function FounderSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="font-sans text-[#0C2298]/70 leading-relaxed font-light"
+                className="font-sans text-[#0C2298] leading-relaxed font-light"
               >
                 {para}
               </motion.p>
@@ -98,7 +98,7 @@ export default function FounderSection() {
             >
               <div>
                 <p className="font-serif text-2xl text-[#0C2298]">Santanu Sengupta</p>
-                <p className="text-sm text-[#537AED] font-semibold font-sans">Founder &amp; CEO, Insight Vector</p>
+                <p className="text-sm text-[#0C2298] font-semibold font-sans">Founder &amp; CEO, Insight Vector</p>
               </div>
             </motion.div>
           </motion.div>

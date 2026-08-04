@@ -76,7 +76,7 @@ export default function WhyChooseSection() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-16"
         >
-          <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4 block">
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
             Why Insight Vector
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
@@ -100,19 +100,19 @@ export default function WhyChooseSection() {
                 }`}
               >
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-white flex items-center justify-center border border-[#D0DAF8] group-hover:bg-[#537AED] group-hover:border-[#537AED] transition-all duration-300">
-                  <Icon size={20} className="text-[#537AED] group-hover:text-white transition-colors duration-300" />
+                  <Icon size={20} className="text-[#0C2298] group-hover:text-white transition-colors duration-300" />
                 </div>
 
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <span className="text-xs font-semibold text-[#537AED] tracking-wider uppercase mb-1 block">
+                      <span className="text-xs font-semibold text-[#0C2298] tracking-wider uppercase mb-1 block">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <h3 className="font-serif text-xl lg:text-2xl text-[#0C2298] mb-2">{reason.title}</h3>
                     </div>
                   </div>
-                  <p className="font-sans text-[#0C2298]/65 leading-relaxed font-light text-[15px]">
+                  <p className="font-sans text-[#0C2298] leading-relaxed font-light text-base">
                     {reason.description}
                   </p>
                 </div>

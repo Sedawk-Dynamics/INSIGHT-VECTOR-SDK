@@ -52,6 +52,15 @@
 
   /* Poppins is scoped to the navbar via the `font-poppins` utility. */
   --font-poppins: var(--font-poppins-sans), 'Poppins', sans-serif;
+
+  /* 16px is the minimum font size site-wide. The two smallest steps in the
+     scale are clamped to 1rem so no utility can render below it. */
+  --text-xs: 1rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
 }
 
 :root {

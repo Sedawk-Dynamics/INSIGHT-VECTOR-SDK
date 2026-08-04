@@ -31,13 +31,13 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4 block">
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
             Get in Touch
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-4 text-balance">
             Start a Conversation
           </h2>
-          <p className="font-sans text-[#537AED]/70 font-light leading-relaxed">
+          <p className="font-sans text-[#0C2298] font-light leading-relaxed">
             Whether you are navigating a strategic challenge, a leadership transition or are simply curious about how we work, we would welcome a conversation.
           </p>
         </motion.div>
@@ -61,10 +61,10 @@ export default function ContactSection() {
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-center gap-4">
                     <div className="w-11 h-11 rounded-xl bg-[#EEF2FF] flex items-center justify-center shrink-0">
-                      <Icon size={18} className="text-[#537AED]" />
+                      <Icon size={18} className="text-[#0C2298]" />
                     </div>
                     <div>
-                      <p className="text-xs text-[#537AED] font-semibold uppercase tracking-wider">{label}</p>
+                      <p className="text-xs text-[#0C2298] font-semibold uppercase tracking-wider">{label}</p>
                       <p className="font-sans text-sm text-[#0C2298] font-medium">{value}</p>
                     </div>
                   </div>
@@ -74,7 +74,7 @@ export default function ContactSection() {
 
             {/* Social */}
             <div>
-              <p className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4">Follow Us</p>
+              <p className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4">Follow Us</p>
               <div className="flex gap-3">
                 {socialLinks.map(({ label, href, Icon }) => (
                   <a
@@ -83,7 +83,7 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="w-11 h-11 rounded-xl bg-[#EEF2FF] flex items-center justify-center text-[#537AED] hover:bg-[#537AED] hover:text-white transition-all duration-200"
+                    className="w-11 h-11 rounded-xl bg-[#EEF2FF] flex items-center justify-center text-[#0C2298] hover:bg-[#537AED] hover:text-white transition-all duration-200"
                   >
                     <Icon size={18} />
                   </a>
@@ -94,7 +94,7 @@ export default function ContactSection() {
             {/* Info box */}
             <div className="rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] p-6">
               <p className="font-serif text-lg text-[#0C2298] mb-2">Every engagement is founder-led.</p>
-              <p className="text-sm font-sans text-[#0C2298]/60 font-light leading-relaxed">
+              <p className="text-sm font-sans text-[#0C2298] font-light leading-relaxed">
                 When you reach out to Insight Vector, you engage directly with senior-level expertise and personalised attention from the first conversation.
               </p>
             </div>
@@ -116,10 +116,10 @@ export default function ContactSection() {
                   className="flex flex-col items-center justify-center py-12 text-center gap-4"
                 >
                   <div className="w-16 h-16 rounded-full bg-[#EEF2FF] flex items-center justify-center mb-2">
-                    <Send size={24} className="text-[#537AED]" />
+                    <Send size={24} className="text-[#0C2298]" />
                   </div>
                   <h3 className="font-serif text-2xl text-[#0C2298]">Thank you for reaching out.</h3>
-                  <p className="font-sans text-[#537AED]/70 font-light max-w-sm">
+                  <p className="font-sans text-[#0C2298] font-light max-w-sm">
                     We will be in touch shortly. Every inquiry is personally reviewed.
                   </p>
                 </motion.div>
@@ -135,7 +135,7 @@ export default function ContactSection() {
                       <div key={field.id} className="flex flex-col gap-1.5">
                         <label htmlFor={field.id} className="text-xs font-semibold text-[#0C2298] tracking-wide uppercase">
                           {field.label}
-                          {field.required && <span className="text-[#537AED] ml-1">*</span>}
+                          {field.required && <span className="text-[#0C2298] ml-1">*</span>}
                         </label>
                         <input
                           id={field.id}
@@ -143,7 +143,7 @@ export default function ContactSection() {
                           required={field.required}
                           value={formData[field.id as keyof typeof formData]}
                           onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-[#D0DAF8] bg-[#EEF2FF]/30 text-[#0C2298] text-sm placeholder:text-[#537AED]/30 focus:outline-none focus:border-[#537AED] focus:ring-2 focus:ring-[#537AED]/10 transition-all duration-200 font-sans"
+                          className="w-full px-4 py-3 rounded-xl border border-[#D0DAF8] bg-[#EEF2FF]/30 text-[#0C2298] text-sm placeholder:text-[#0C2298]/50 focus:outline-none focus:border-[#537AED] focus:ring-2 focus:ring-[#537AED]/10 transition-all duration-200 font-sans"
                           placeholder={`Enter your ${field.label.toLowerCase()}`}
                         />
                       </div>
@@ -152,7 +152,7 @@ export default function ContactSection() {
 
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="message" className="text-xs font-semibold text-[#0C2298] tracking-wide uppercase">
-                      Message <span className="text-[#537AED]">*</span>
+                      Message <span className="text-[#0C2298]">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -160,7 +160,7 @@ export default function ContactSection() {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#D0DAF8] bg-[#EEF2FF]/30 text-[#0C2298] text-sm placeholder:text-[#537AED]/30 focus:outline-none focus:border-[#537AED] focus:ring-2 focus:ring-[#537AED]/10 transition-all duration-200 resize-none font-sans"
+                      className="w-full px-4 py-3 rounded-xl border border-[#D0DAF8] bg-[#EEF2FF]/30 text-[#0C2298] text-sm placeholder:text-[#0C2298]/50 focus:outline-none focus:border-[#537AED] focus:ring-2 focus:ring-[#537AED]/10 transition-all duration-200 resize-none font-sans"
                       placeholder="Tell us about your challenge or question..."
                     />
                   </div>
@@ -173,7 +173,7 @@ export default function ContactSection() {
                     <Send size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
 
-                  <p className="text-xs text-center text-[#537AED]/40 font-sans">
+                  <p className="text-xs text-center text-[#0C2298] font-sans">
                     Your information is kept strictly confidential and will never be shared.
                   </p>
                 </form>

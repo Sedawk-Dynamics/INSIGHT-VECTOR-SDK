@@ -72,7 +72,7 @@ export default function HeroSection() {
               className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-[#0C2298] text-balance"
             >
               Clarity for{' '}
-              <span className="text-[#537AED]">Complexity.</span>
+              <span className="text-[#0C2298]">Complexity.</span>
               <br />
               Direction for{' '}
               <span className="relative inline-block">
@@ -96,7 +96,7 @@ export default function HeroSection() {
             >
               {['Strategy', 'Growth', 'Risk', 'Leadership'].map((pillar, i) => (
                 <span key={pillar} className="flex items-center gap-x-3">
-                  {i > 0 && <span aria-hidden="true" className="text-[#537AED]/40">|</span>}
+                  {i > 0 && <span aria-hidden="true" className="text-[#0C2298]">|</span>}
                   <span className="text-lg lg:text-xl font-medium tracking-wide">{pillar}</span>
                 </span>
               ))}
@@ -108,7 +108,7 @@ export default function HeroSection() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-sans text-lg text-[#537AED]/80 leading-relaxed max-w-xl font-light"
+              className="font-sans text-lg text-[#0C2298] leading-relaxed max-w-xl font-light"
             >
               Insight Vector is a founder-led strategic advisory, executive coaching and leadership
               development firm helping founders, business owners, CXOs and senior leaders navigate
@@ -132,7 +132,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="#services"
-                className="flex items-center gap-2 px-8 py-4 bg-white text-[#0C2298] font-semibold rounded-full border-2 border-[#D0DAF8] hover:border-[#537AED] hover:text-[#537AED] transition-all duration-300"
+                className="flex items-center gap-2 px-8 py-4 bg-white text-[#0C2298] font-semibold rounded-full border-2 border-[#D0DAF8] hover:border-[#537AED] hover:text-[#0C2298] transition-all duration-300"
               >
                 Explore Services
               </Link>
@@ -171,11 +171,11 @@ export default function HeroSection() {
             >
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center">
-                  <TrendingUp size={18} className="text-[#537AED]" />
+                  <TrendingUp size={18} className="text-[#0C2298]" />
                 </div>
                 <span className="text-sm font-semibold text-[#0C2298]">Growth Strategy</span>
               </div>
-              <p className="text-xs text-[#537AED]/70 leading-relaxed">
+              <p className="text-xs text-[#0C2298] leading-relaxed">
                 Turning ambition into sustainable, disciplined growth.
               </p>
             </motion.div>

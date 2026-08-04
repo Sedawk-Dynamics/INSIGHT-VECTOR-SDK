@@ -53,7 +53,7 @@ export default function ValuesSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4 block">
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
             Our Values
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
@@ -79,11 +79,11 @@ export default function ValuesSection() {
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ring-1 ring-[#537AED]/20 pointer-events-none" />
 
                 <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mb-5 group-hover:bg-[#537AED] transition-colors duration-300">
-                  <Icon size={20} className="text-[#537AED] group-hover:text-white transition-colors duration-300" />
+                  <Icon size={20} className="text-[#0C2298] group-hover:text-white transition-colors duration-300" />
                 </div>
 
                 <h3 className="font-serif text-xl text-[#0C2298] mb-2">{value.title}</h3>
-                <p className="font-sans text-sm text-[#0C2298]/60 leading-relaxed font-light">
+                <p className="font-sans text-sm text-[#0C2298] leading-relaxed font-light">
                   {value.description}
                 </p>
               </motion.div>
@@ -103,7 +103,7 @@ export default function ValuesSection() {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#537AED] hover:text-white transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200"
             >
               Partner with Us →
             </a>

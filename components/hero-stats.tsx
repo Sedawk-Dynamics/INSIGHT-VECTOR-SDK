@@ -24,10 +24,10 @@ export default function HeroStats({ className = '' }: { className?: string }) {
           className="rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] px-5 py-4 hover:border-[#537AED] transition-colors duration-300"
         >
           <div className="flex items-center gap-2 mb-1">
-            <Icon size={15} className="text-[#537AED] shrink-0" />
+            <Icon size={15} className="text-[#0C2298] shrink-0" />
             <span className="text-2xl font-semibold text-[#0C2298] leading-none">{value}</span>
           </div>
-          <span className="text-[13px] text-[#537AED] font-medium tracking-wide leading-snug block">
+          <span className="text-base text-[#0C2298] font-medium tracking-wide leading-snug block">
             {label}
           </span>
         </motion.div>

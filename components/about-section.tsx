@@ -52,7 +52,7 @@ export default function AboutSection() {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-8"
           >
-            <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase">
+            <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
               About Insight Vector
             </span>
             <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
@@ -67,19 +67,19 @@ export default function AboutSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative pl-6 border-l-4 border-[#537AED] bg-[#EEF2FF] rounded-r-2xl py-5 pr-6"
             >
-              <Quote size={20} className="text-[#537AED] mb-2" />
+              <Quote size={20} className="text-[#0C2298] mb-2" />
               <p className="font-serif text-xl lg:text-2xl text-[#0C2298] italic leading-snug">
                 &ldquo;Better decisions begin with sharper insight — and create stronger outcomes.&rdquo;
               </p>
             </motion.blockquote>
 
-            <p className="font-sans text-[#0C2298]/70 leading-relaxed font-light text-lg">
+            <p className="font-sans text-[#0C2298] leading-relaxed font-light text-lg">
               Founded by Santanu Sengupta — a global business leader, Board Director, strategic advisor
               and ICF-credentialed Executive Coach — Insight Vector brings together over three decades
               of leadership experience across businesses, markets, cultures and transformation journeys.
             </p>
 
-            <p className="font-sans text-[#0C2298]/60 leading-relaxed font-light">
+            <p className="font-sans text-[#0C2298] leading-relaxed font-light">
               We work across three core areas: strategic advisory, executive coaching and mentoring, and
               leadership development. Across all three, our approach is practical, personalised and
               grounded in real-world experience.
@@ -104,7 +104,7 @@ export default function AboutSection() {
             >
               <span
                 className={`text-xs font-semibold tracking-widest uppercase mb-4 block ${
-                  i === 0 ? 'text-[#537AED]' : 'text-[#537AED]'
+                  i === 0 ? 'text-white' : 'text-[#0C2298]'
                 }`}
               >
                 {label}

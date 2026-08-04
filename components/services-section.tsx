@@ -58,13 +58,13 @@ export default function ServicesSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mb-16"
         >
-          <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4 block">
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
             Our Core Services
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
             Three Engagement Area
           </h2>
-          <p className="font-sans text-lg text-[#537AED]/70 leading-relaxed font-light">
+          <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-light">
             Strategy, growth and risk cannot be managed in separate boxes. Our integrated perspective
             helps businesses pursue opportunity while building resilience.
           </p>
@@ -92,14 +92,14 @@ export default function ServicesSection() {
                     {service.number}
                   </span>
                   <div className="w-14 h-14 rounded-2xl bg-[#EEF2FF] flex items-center justify-center group-hover:bg-[#537AED] transition-colors duration-300">
-                    <Icon size={22} className="text-[#537AED] group-hover:text-white transition-colors duration-300" />
+                    <Icon size={22} className="text-[#0C2298] group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <h3 className="font-serif text-2xl text-[#0C2298] mb-2 leading-snug">{service.title}</h3>
-                <p className="text-sm font-semibold text-[#537AED] mb-4 italic font-sans">{service.tagline}</p>
-                <p className="text-sm text-[#0C2298]/70 leading-relaxed font-sans font-light mb-6 flex-1">
+                <p className="text-sm font-semibold text-[#0C2298] mb-4 italic font-sans">{service.tagline}</p>
+                <p className="text-sm text-[#0C2298] leading-relaxed font-sans font-light mb-6 flex-1">
                   {service.description}
                 </p>
 
@@ -118,7 +118,7 @@ export default function ServicesSection() {
                 {/* Link */}
                 <Link
                   href="#contact"
-                  className="flex items-center gap-2 text-sm font-semibold text-[#537AED] hover:text-[#0C2298] transition-colors duration-200 group/link"
+                  className="flex items-center gap-2 text-sm font-semibold text-[#0C2298] hover:text-[#0C2298] transition-colors duration-200 group/link"
                 >
                   Learn More
                   <ArrowRight

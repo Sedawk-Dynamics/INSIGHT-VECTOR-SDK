@@ -70,7 +70,7 @@ export default function InsightsSection() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
         >
           <div>
-            <span className="text-xs font-semibold text-[#537AED] tracking-widest uppercase mb-4 block">
+            <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
               Featured Insights
             </span>
             <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
@@ -79,7 +79,7 @@ export default function InsightsSection() {
           </div>
           <Link
             href="#contact"
-            className="shrink-0 flex items-center gap-2 text-sm font-semibold text-[#537AED] hover:text-[#0C2298] transition-colors duration-200 group"
+            className="shrink-0 flex items-center gap-2 text-sm font-semibold text-[#0C2298] hover:text-[#0C2298] transition-colors duration-200 group"
           >
             View all insights
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -102,8 +102,8 @@ export default function InsightsSection() {
                 <span
                   className={`text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border ${
                     insight.color === 'bg-[#0C2298]'
-                      ? 'text-[#537AED] border-[#537AED]/30 bg-white/10'
-                      : 'text-[#537AED] border-[#537AED]/20 bg-[#EEF2FF]'
+                      ? 'text-white border-white/30 bg-white/10'
+                      : 'text-[#0C2298] border-[#537AED]/20 bg-[#EEF2FF]'
                   }`}
                 >
                   {insight.category}
@@ -111,7 +111,7 @@ export default function InsightsSection() {
                 <ArrowRight
                   size={16}
                   className={`opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 ${
-                    insight.color === 'bg-[#0C2298]' ? 'text-white' : 'text-[#537AED]'
+                    insight.color === 'bg-[#0C2298]' ? 'text-white' : 'text-[#0C2298]'
                   }`}
                 />
               </div>
@@ -122,7 +122,7 @@ export default function InsightsSection() {
 
               <p
                 className={`font-sans text-sm leading-relaxed font-light mb-6 ${
-                  insight.color === 'bg-[#0C2298]' ? 'text-white/60' : 'text-[#0C2298]/60'
+                  insight.color === 'bg-[#0C2298]' ? 'text-white/60' : 'text-[#0C2298]'
                 }`}
               >
                 {insight.excerpt}
@@ -130,7 +130,7 @@ export default function InsightsSection() {
 
               <div
                 className={`flex items-center gap-3 text-xs font-medium pt-4 border-t ${
-                  insight.color === 'bg-[#0C2298]' ? 'border-white/10 text-white/40' : 'border-[#D0DAF8] text-[#537AED]/60'
+                  insight.color === 'bg-[#0C2298]' ? 'border-white/10 text-white/40' : 'border-[#D0DAF8] text-[#0C2298]'
                 }`}
               >
                 <Calendar size={12} />
