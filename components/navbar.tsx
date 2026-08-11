@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Menu, X } from 'lucide-react'
 
@@ -18,14 +19,23 @@ const navLinks = [
   { label: 'About', href: '/#about' },
   { label: 'Services', href: '/#services', hasDropdown: true },
   { label: 'Our Founder', href: '/#founder' },
+  { label: 'Featured Insights', href: '/featured-insights' },
   { label: 'Media & Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/#contact' },
 ]
+
+/** True when `href` is a real route (not a home-page anchor) and is the page we are on. */
+function isActive(href: string, pathname: string) {
+  return href.startsWith('/') && !href.includes('#') && pathname === href
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+  // The Services dropdown counts as current whenever a service page is open.
+  const onServicePage = services.some((s) => pathname === s.href)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30)
@@ -55,7 +65,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
+        <div className="hidden xl:flex items-center gap-0.5 xl:gap-1">
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <div
@@ -67,7 +77,10 @@ export default function Navbar() {
                 <button
                   aria-expanded={dropdownOpen}
                   aria-haspopup="true"
-                  className="group relative flex items-center gap-1.5 h-10 px-3 xl:px-3.5 font-poppins text-base font-normal leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                  aria-current={onServicePage ? 'page' : undefined}
+                  className={`group relative flex items-center gap-1.5 h-10 px-3 font-poppins text-base leading-none whitespace-nowrap transition-colors duration-300 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#537AED] rounded-md ${
+                    onServicePage ? 'font-semibold text-[#0C2298]' : 'font-normal text-black hover:text-[#0C2298]'
+                  }`}
                 >
                   <span>{link.label}</span>
                   <ChevronDown
@@ -75,7 +88,11 @@ export default function Navbar() {
                     strokeWidth={2.25}
                     className={`shrink-0 mt-px transition-transform duration-300 ease-out ${dropdownOpen ? 'rotate-180' : ''}`}
                   />
-                  <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#0C2298] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                  <span
+                    className={`pointer-events-none absolute bottom-1.5 left-3 right-3 h-[2px] rounded-full bg-[#0C2298] origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 ${
+                      onServicePage ? 'scale-x-100' : 'scale-x-0'
+                    }`}
+                  />
                 </button>
                 <AnimatePresence>
                   {dropdownOpen && (
@@ -90,7 +107,12 @@ export default function Navbar() {
                         <Link
                           key={service.label}
                           href={service.href}
-                          className="block px-5 py-2.5 font-poppins text-base font-normal leading-snug text-black hover:bg-[#EEF2FF] hover:text-[#0C2298] transition-colors duration-[250ms] ease-out"
+                          aria-current={pathname === service.href ? 'page' : undefined}
+                          className={`block px-5 py-2.5 font-poppins text-base leading-snug hover:bg-[#EEF2FF] hover:text-[#0C2298] transition-colors duration-[250ms] ease-out ${
+                            pathname === service.href
+                              ? 'font-semibold text-[#0C2298] bg-[#EEF2FF]'
+                              : 'font-normal text-black'
+                          }`}
                         >
                           {service.label}
                         </Link>
@@ -103,17 +125,26 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative flex items-center h-10 px-3 xl:px-3.5 font-poppins text-base font-normal leading-none whitespace-nowrap text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                aria-current={isActive(link.href, pathname) ? 'page' : undefined}
+                className={`group relative flex items-center h-10 px-3 font-poppins text-base leading-none whitespace-nowrap transition-colors duration-300 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#537AED] rounded-md ${
+                  isActive(link.href, pathname)
+                    ? 'font-semibold text-[#0C2298]'
+                    : 'font-normal text-black hover:text-[#0C2298]'
+                }`}
               >
                 <span>{link.label}</span>
-                <span className="pointer-events-none absolute bottom-1.5 left-3 right-3 xl:left-3.5 xl:right-3.5 h-[2px] rounded-full bg-[#0C2298] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span
+                  className={`pointer-events-none absolute bottom-1.5 left-3 right-3 h-[2px] rounded-full bg-[#0C2298] origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 ${
+                    isActive(link.href, pathname) ? 'scale-x-100' : 'scale-x-0'
+                  }`}
+                />
               </Link>
             )
           )}
         </div>
 
         {/* CTA */}
-        <div className="hidden lg:flex items-center shrink-0">
+        <div className="hidden xl:flex items-center shrink-0">
           <Link
             href="/#contact"
             className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white font-poppins text-base font-bold leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
@@ -124,8 +155,9 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden -mr-1 p-2 text-[#0C2298] hover:text-[#537AED] transition-colors duration-300 ease-out"
+          className="xl:hidden -mr-1 p-2 text-[#0C2298] hover:text-[#537AED] transition-colors duration-300 ease-out"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-expanded={mobileOpen}
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -140,7 +172,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-[#D0DAF8] overflow-hidden"
+            className="xl:hidden bg-white border-t border-[#D0DAF8] overflow-hidden"
           >
             <div className="px-5 sm:px-6 py-3 flex flex-col">
               {navLinks.map((link) => (
@@ -148,7 +180,12 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3.5 font-poppins text-base font-normal text-black hover:text-[#0C2298] border-b border-[#EEF2FF] transition-colors duration-300 ease-out"
+                  aria-current={isActive(link.href, pathname) ? 'page' : undefined}
+                  className={`py-3.5 font-poppins text-base border-b border-[#EEF2FF] transition-colors duration-300 ease-out ${
+                    isActive(link.href, pathname)
+                      ? 'font-semibold text-[#0C2298] border-l-2 border-l-[#537AED] pl-3'
+                      : 'font-normal text-black hover:text-[#0C2298]'
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -159,7 +196,12 @@ export default function Navbar() {
                     key={service.label}
                     href={service.href}
                     onClick={() => setMobileOpen(false)}
-                    className="py-2.5 pl-4 font-poppins text-base font-normal text-black hover:text-[#0C2298] transition-colors duration-300 ease-out"
+                    aria-current={pathname === service.href ? 'page' : undefined}
+                    className={`py-2.5 pl-4 font-poppins text-base transition-colors duration-300 ease-out ${
+                      pathname === service.href
+                        ? 'font-semibold text-[#0C2298]'
+                        : 'font-normal text-black hover:text-[#0C2298]'
+                    }`}
                   >
                     {`— ${service.label}`}
                   </Link>

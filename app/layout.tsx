@@ -22,6 +22,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  // Lets pages declare relative canonical / OG URLs and have them resolved absolutely.
+  metadataBase: new URL('https://insightvector.com'),
   title: 'Insight Vector | Strategic Advisory & Executive Coaching',
   description:
     'Insight Vector is a founder-led strategic advisory, executive coaching and leadership development firm helping founders, CXOs and senior leaders navigate complexity, accelerate growth and build future-ready organisations.',
