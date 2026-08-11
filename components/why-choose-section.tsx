@@ -66,7 +66,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -127,9 +127,9 @@ export default function WhyChooseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 rounded-3xl bg-[#0C2298] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8"
+          className="mt-12 rounded-3xl bg-[#0C2298] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8"
         >
-          <div>
+          <div className="flex-1 text-center lg:text-left">
             <h3 className="font-serif text-3xl lg:text-4xl text-white mb-3 text-balance">
               Navigate Complexity with Confidence.
             </h3>

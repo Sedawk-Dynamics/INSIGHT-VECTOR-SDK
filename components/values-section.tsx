@@ -3,6 +3,18 @@
 import { motion } from 'framer-motion'
 import { Focus, Shield, Heart, Zap, Flame, Telescope, Users } from 'lucide-react'
 
+// Mission and Vision sit with the values, immediately above the core values grid.
+const missionVision = [
+  {
+    label: 'Our Mission',
+    text: 'To help businesses and leaders turn complexity into clarity, ambition into sustainable growth and insight into meaningful action.',
+  },
+  {
+    label: 'Our Vision',
+    text: 'To be a trusted partner to future-ready businesses and leaders navigating growth, transformation, strategic risk and an increasingly complex world.',
+  },
+]
+
 const values = [
   {
     icon: Focus,
@@ -43,8 +55,28 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="py-24 lg:py-32 bg-[#EEF2FF]">
+    /* White ground so the light blue Mission and Vision cards stay visible. */
+    <section className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Mission & Vision — both cards share the light blue treatment */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {missionVision.map(({ label, text }, i) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              className="rounded-3xl p-8 lg:p-10 border bg-[#EEF2FF] border-[#D0DAF8] text-[#0C2298]"
+            >
+              <span className="text-xs font-semibold tracking-widest uppercase mb-4 block text-[#0C2298]">
+                {label}
+              </span>
+              <p className="font-serif text-2xl lg:text-3xl leading-snug text-[#0C2298]">{text}</p>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -57,7 +89,7 @@ export default function ValuesSection() {
             Our Values
           </span>
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
-            What We Stand For
+            Core Values
           </h2>
         </motion.div>
 

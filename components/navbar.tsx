@@ -143,16 +143,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* CTA */}
-        <div className="hidden xl:flex items-center shrink-0">
-          <Link
-            href="/#contact"
-            className="inline-flex items-center h-10 px-5 xl:px-6 bg-[#537AED] text-white font-poppins text-base font-bold leading-none whitespace-nowrap rounded-full hover:bg-[#0C2298] transition-[background-color,box-shadow] duration-300 ease-out shadow-[0_1px_8px_rgba(83,122,237,0.28)] hover:shadow-[0_4px_18px_rgba(12,34,152,0.32)]"
-          >
-            Partner with Us
-          </Link>
-        </div>
-
         {/* Mobile toggle */}
         <button
           className="xl:hidden -mr-1 p-2 text-[#0C2298] hover:text-[#537AED] transition-colors duration-300 ease-out"
@@ -207,13 +197,6 @@ export default function Navbar() {
                   </Link>
                 ))}
               </div>
-              <Link
-                href="/#contact"
-                onClick={() => setMobileOpen(false)}
-                className="mt-4 inline-flex items-center justify-center h-11 px-6 bg-[#537AED] text-white font-poppins text-base font-bold rounded-full hover:bg-[#0C2298] transition-colors duration-300 ease-out"
-              >
-                Partner with Us
-              </Link>
             </div>
           </motion.div>
         )}

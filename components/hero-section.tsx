@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, TrendingUp, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -25,7 +25,7 @@ const fadeRight = {
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20">
+    <section id="home" className="relative flex items-center overflow-hidden bg-white pt-20">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -44,39 +44,25 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            {/* Tag */}
-            <motion.div
-              custom={0}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#EEF2FF] rounded-full border border-[#D0DAF8]"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#537AED] animate-pulse" />
-              <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
-                Founder-Led Strategic Advisory
-              </span>
-            </motion.div>
-
+          <div className="space-y-6">
             {/* Headline */}
             <motion.h1
               custom={1}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              /* Sized with a viewport-relative clamp so "Clarity for Complexity."
-                 always fits on a single line, at every width. */
-              className="font-serif text-[clamp(1.75rem,4.2vw,3.25rem)] leading-[1.15] text-[#0C2298]"
+              /* Sized with a viewport-relative clamp so each sentence fits on a
+                 single line, at every width. The clamp is driven by the longer
+                 of the two lines, "Direction for What Comes Next." */
+              className="font-serif text-[clamp(1.5rem,3.3vw,2.9rem)] leading-[1.15] text-[#0C2298]"
             >
               <span className="block whitespace-nowrap">Clarity for Complexity.</span>
-              <span className="block">
-                Direction for{' '}
+              <span className="block whitespace-nowrap">
                 <span className="relative inline-block">
-                  What Comes Next.
+                  Direction for What Comes Next.
                   <motion.span
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
@@ -128,7 +114,7 @@ export default function HeroSection() {
                 href="#contact"
                 className="group flex items-center gap-2 px-8 py-4 bg-[#0C2298] text-white font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-lg hover:shadow-[0_8px_30px_rgba(83,122,237,0.4)]"
               >
-                Partner with Us
+                Contact Us
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
@@ -159,42 +145,6 @@ export default function HeroSection() {
               {/* Overlay tint */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#0C2298]/10 to-transparent" />
             </div>
-
-            {/* Floating card 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.8 }}
-              className="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-[0_8px_40px_rgba(83,122,237,0.18)] border border-[#D0DAF8] p-5 w-56"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center">
-                  <TrendingUp size={18} className="text-[#0C2298]" />
-                </div>
-                <span className="text-sm font-semibold text-[#0C2298]">Growth Strategy</span>
-              </div>
-              <p className="text-xs text-[#0C2298] leading-relaxed">
-                Turning ambition into sustainable, disciplined growth.
-              </p>
-            </motion.div>
-
-            {/* Floating card 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className="absolute -top-6 -right-6 bg-[#0C2298] rounded-2xl shadow-[0_8px_40px_rgba(12,34,152,0.3)] p-5 w-52"
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Globe size={14} className="text-white" />
-                </div>
-                <span className="text-sm font-semibold text-white">Global Reach</span>
-              </div>
-              <p className="text-xs text-white/70 leading-relaxed">
-                Multi-market leadership across diverse geographies.
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -48,7 +48,7 @@ const fadeUp = {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-white">
+    <section id="services" className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -58,11 +58,9 @@ export default function ServicesSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mb-16"
         >
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-            Our Core Services
-          </span>
+          {/* Same 60px serif treatment as "Built on a Simple Belief". */}
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
-            Three Engagement Area
+            Our Core Services
           </h2>
           <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-normal">
             Strategy, growth and risk cannot be managed in separate boxes. Our integrated perspective
@@ -96,15 +94,24 @@ export default function ServicesSection() {
                   </div>
                 </div>
 
-                {/* Content */}
-                <h3 className="font-serif text-2xl text-[#0C2298] mb-2 leading-snug">{service.title}</h3>
-                <p className="text-sm font-semibold text-[#0C2298] mb-4 italic font-sans">{service.tagline}</p>
-                <p className="text-sm text-[#0C2298] leading-relaxed font-sans font-normal mb-6 flex-1">
+                {/* Content — min-heights keep the title, tagline and body starting
+                    on the same baseline in all three cards regardless of length. */}
+                <h3 className="font-serif text-3xl font-bold text-[#0C2298] mb-3 leading-snug min-h-[5rem]">
+                  {service.title}
+                </h3>
+                <p className="text-base font-semibold text-[#0C2298] mb-4 italic font-sans min-h-[3rem]">
+                  {service.tagline}
+                </p>
+                {/* flex-1 absorbs the spare height, pushing the tag block to a
+                    consistent foot across all three cards. */}
+                <p className="text-base text-[#0C2298] leading-relaxed font-sans font-medium mb-6 flex-1">
                   {service.description}
                 </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* Tags — min-height is sized for the longest list (five rows) so
+                    every card's tags start on the same line and "Learn More"
+                    sits at the same baseline. */}
+                <div className="flex flex-wrap gap-2 mb-6 min-h-[12rem] content-start">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}

@@ -21,7 +21,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-white">
+    <section id="contact" className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -29,7 +29,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-12"
         >
           <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
             Partner with Us
