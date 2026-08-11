@@ -312,16 +312,9 @@ export default function FeaturedInsightsContent() {
                 whileInView="visible"
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300 focus-within:border-[#537AED] focus-within:shadow-[0_12px_50px_rgba(83,122,237,0.18)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_12px_50px_rgba(83,122,237,0.18)] transition-all duration-300 focus-within:border-[#537AED] focus-within:shadow-[0_12px_50px_rgba(83,122,237,0.18)]"
               >
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabIndex={-1}
-                  aria-hidden="true"
-                  className="relative block w-full aspect-video overflow-hidden bg-[#EEF2FF]"
-                >
+                <span className="relative block w-full aspect-video overflow-hidden bg-[#EEF2FF]">
                   {item.image ? (
                     <Image
                       src={item.image}
@@ -337,7 +330,7 @@ export default function FeaturedInsightsContent() {
                       </span>
                     </span>
                   )}
-                </a>
+                </span>
 
                 <div className="flex flex-1 flex-col p-5 border-t border-[#D0DAF8]">
                   <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#0C2298] mb-2">
@@ -346,11 +339,14 @@ export default function FeaturedInsightsContent() {
                   </p>
 
                   <h3 className="font-serif text-xl text-[#0C2298] leading-snug mb-2">
+                    {/* The ::after overlay stretches this link across the whole card,
+                        so the image, title and "Read on LinkedIn" are all clickable
+                        while the card still exposes a single link to assistive tech. */}
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="outline-none focus-visible:underline focus-visible:decoration-[#537AED] focus-visible:decoration-2 focus-visible:underline-offset-4"
+                      className="outline-none after:absolute after:inset-0 after:content-[''] focus-visible:underline focus-visible:decoration-[#537AED] focus-visible:decoration-2 focus-visible:underline-offset-4"
                     >
                       {item.title}
                     </a>
