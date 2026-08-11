@@ -17,6 +17,8 @@ type Insight = {
 
 const NEWSLETTER_URL =
   'https://www.linkedin.com/newsletters/boardroom-beyond-7334260123055321088/'
+/** Boardroom & Beyond artwork, used for the newsletter card and posts with no image of their own. */
+const BOARDROOM_IMAGE = '/boardroom-and-beyond.png'
 const CALENDLY_URL = 'https://calendly.com/sengupta-santanu/new-meeting?back=1'
 
 /**
@@ -55,6 +57,7 @@ const insights: Insight[] = [
     excerpt:
       'Strategy gets built in boardrooms. Risk gets reviewed in audit committees. The two rarely intersect until something goes wrong. Organisations that embed enterprise risk management into strategic planning move faster, not slower.',
     date: '8 January 2026',
+    image: BOARDROOM_IMAGE,
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7414868319561945088/',
   },
   {
@@ -126,6 +129,7 @@ const insights: Insight[] = [
     excerpt:
       'Featured in the November edition of Director Today, the monthly journal of the Institute of Directors (IOD), India. AI is transforming ESG from a compliance checkbox into a strategic boardroom tool.',
     date: '13 November 2025',
+    image: BOARDROOM_IMAGE,
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7394576132072947712/',
   },
   {
@@ -205,13 +209,13 @@ export default function FeaturedInsightsContent() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="group grid md:grid-cols-3 gap-0 overflow-hidden rounded-3xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_16px_60px_rgba(83,122,237,0.15)] transition-all duration-300"
           >
-            <span className="relative block aspect-video md:aspect-auto md:min-h-[15rem] bg-[#0C2298] overflow-hidden">
+            <span className="relative block aspect-video md:aspect-auto md:min-h-[15rem] bg-[#EEF2FF] overflow-hidden">
               <Image
-                src="/insights/2.png"
+                src={BOARDROOM_IMAGE}
                 alt="Boardroom &amp; Beyond newsletter cover"
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"
-                className="object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </span>
 
@@ -321,7 +325,9 @@ export default function FeaturedInsightsContent() {
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      /* contain, not cover: these posts mix wide article covers with
+                         portrait photos, and cropping would cut off the artwork text. */
+                      className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                     />
                   ) : (
                     <span className="flex h-full w-full items-center justify-center bg-[#0C2298] px-6 text-center">
