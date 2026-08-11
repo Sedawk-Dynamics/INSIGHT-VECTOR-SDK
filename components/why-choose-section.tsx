@@ -76,12 +76,13 @@ export default function WhyChooseSection() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-16"
         >
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-            Why Insight Vector
-          </span>
+          
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
-            Because Complex Challenges Need More Than Textbook Answers
+           Insight Vector
           </h2>
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
+           Because Complex Challenges Need More Than Textbook Answers
+          </span>
         </motion.div>
 
         {/* Alternating timeline layout */}

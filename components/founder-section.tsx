@@ -51,7 +51,12 @@ export default function FounderSection() {
               <p className="font-serif text-xl text-[#0C2298]">Santanu Sengupta</p>
               <p className="text-sm text-[#0C2298] font-medium font-sans">Founder, Insight Vector</p>
               <p className="text-xs text-[#0C2298] font-sans mt-1">
-                Former MD & APAC Business Leader · ICF-Credentialed Executive Coach · Board Director
+                Former MD,Wells Fargo Bank
+                <br/>
+                Board Director
+                <br/> 
+                ICF Certified Executive Coach
+               
               </p>
             </motion.div>
           </motion.div>
@@ -65,7 +70,8 @@ export default function FounderSection() {
             className="lg:col-span-3 space-y-6 pt-0 lg:pt-4"
           >
             <div className="flex items-center gap-3 mb-6">
-              <Quote size={28} className="text-[#0C2298]" />
+              {/* Rotated so the glyph reads as an opening quote, not a closing one. */}
+              <Quote size={28} className="text-[#0C2298] rotate-180" aria-hidden="true" />
               <span className="font-serif text-2xl text-[#0C2298] italic">Insight matters. But what we do with it matters more.</span>
             </div>
 

@@ -63,7 +63,7 @@ export default function ServicesSection() {
             Our Core Services
           </h2>
           <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-normal">
-            Strategy, growth and risk cannot be managed in separate boxes. Our integrated perspective
+            Strategy, growth, risk and leadership cannot be managed in separate boxes. Our integrated perspective
             helps businesses pursue opportunity while building resilience.
           </p>
         </motion.div>

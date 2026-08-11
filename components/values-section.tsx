@@ -69,7 +69,7 @@ export default function ValuesSection() {
               transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="rounded-3xl p-8 lg:p-10 border bg-[#EEF2FF] border-[#D0DAF8] text-[#0C2298]"
             >
-              <span className="text-xs font-semibold tracking-widest uppercase mb-4 block text-[#0C2298]">
+              <span className="text-xl font-semibold tracking-widest uppercase mb-4 block text-[#0C2298]">
                 {label}
               </span>
               <p className="font-serif text-2xl lg:text-3xl leading-snug text-[#0C2298]">{text}</p>
@@ -85,12 +85,13 @@ export default function ValuesSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-            Our Values
-          </span>
+          
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
-            Core Values
+           Our Values
           </h2>
+          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
+            Core Values
+          </span>
         </motion.div>
 
         {/* Values grid */}

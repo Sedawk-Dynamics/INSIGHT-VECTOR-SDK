@@ -135,7 +135,7 @@ export default function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.15)]">
               <Image
-                src="/hero-boardroom.png"
+                src="/hero-banner.jpeg"
                 alt="Executive boardroom strategy session"
                 width={680}
                 height={520}

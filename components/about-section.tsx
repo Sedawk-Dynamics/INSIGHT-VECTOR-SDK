@@ -18,12 +18,17 @@ export default function AboutSection() {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-8"
           >
-            <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
-              About Insight Vector
-            </span>
-            <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
-              Built on a Simple Belief
-            </h2>
+            {/* Heading and its kicker are grouped so the section's space-y rhythm
+                treats them as one block instead of spacing them apart. The kicker
+                must be a block for its top margin to take effect. */}
+            <div>
+              <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
+                About Insight Vector
+              </h2>
+              <span className="block mt-3 text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
+                Built on a Simple Belief
+              </span>
+            </div>
 
             {/* Animated quote */}
             <motion.blockquote
