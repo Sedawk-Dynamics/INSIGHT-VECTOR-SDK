@@ -4,13 +4,16 @@ import { motion } from 'framer-motion'
 import { Award, Briefcase, Globe } from 'lucide-react'
 
 type Stat = {
+  /** Short headline figure. Kept to one or two words so it never wraps. */
   value: string
   label: string
-  /** Optional second line, e.g. the founder's former role. */
+  /** Optional supporting line, e.g. the founder's former role. */
   note?: string
   icon: typeof Award
 }
 
+// The figure and its unit are split so the eye lands on the number first and
+// the long descriptive text lives in `label`, where wrapping is expected.
 const stats: Stat[] = [
   { value: '30+ Years', label: 'Global Banking, Board & Strategic Advisory', icon: Award },
   { value: 'C-Suite', label: 'Experience', note: 'Former MD Wells Fargo Bank', icon: Briefcase },
@@ -19,6 +22,10 @@ const stats: Stat[] = [
 
 /**
  * The three credibility boxes shown in the hero banner of every page.
+ *
+ * Laid out horizontally — icon chip on the left, text stacked beside it — so a
+ * value or label of any length simply flows down its own column instead of
+ * throwing the card's internal baselines out of step with its neighbours.
  */
 export default function HeroStats({ className = '' }: { className?: string }) {
   return (
@@ -29,23 +36,26 @@ export default function HeroStats({ className = '' }: { className?: string }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className="flex h-full flex-col rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] px-5 py-5 hover:border-[#537AED] transition-colors duration-300"
+          className="group flex h-full items-start gap-3.5 rounded-2xl bg-white border border-[#D0DAF8] px-5 py-5 hover:border-[#537AED] hover:shadow-[0_8px_28px_rgba(83,122,237,0.12)] transition-all duration-300"
         >
-          {/* The icon sits on its own row rather than inline with the value, so a
-              value that wraps ("30+ Years") keeps every line flush to the same
-              left margin instead of indenting under the icon. The value block is
-              min-height'd for two lines so all three labels start level. */}
-          <Icon size={16} className="text-[#0C2298] shrink-0 mb-2" />
-          <span className="block min-h-[3.5rem] text-2xl font-semibold text-[#0C2298] leading-tight">
-            {value}
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF2FF] group-hover:bg-[#537AED] transition-colors duration-300">
+            <Icon
+              size={18}
+              className="text-[#0C2298] group-hover:text-white transition-colors duration-300"
+            />
           </span>
-          <span className="block text-base text-[#0C2298] font-medium leading-snug">{label}</span>
-          {/* mt-auto drops the note to the card foot, level across the row. */}
-          {note && (
-            <span className="mt-auto pt-2 block text-base text-[#0C2298] font-semibold leading-snug">
-              {note}
-            </span>
-          )}
+
+          <div className="min-w-0">
+            <p className="font-serif text-xl lg:text-2xl font-semibold text-[#0C2298] leading-tight">
+              {value}
+            </p>
+            <p className="mt-1 font-sans text-base text-[#0C2298] leading-snug">{label}</p>
+            {note && (
+              <p className="mt-1.5 font-sans text-base font-semibold text-[#0C2298] leading-snug">
+                {note}
+              </p>
+            )}
+          </div>
         </motion.div>
       ))}
     </div>
