@@ -56,10 +56,10 @@ const values = [
 export default function ValuesSection() {
   return (
     /* White ground so the light blue Mission and Vision cards stay visible. */
-    <section className="py-16 lg:py-20 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Mission & Vision — both cards share the light blue treatment */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
           {missionVision.map(({ label, text }, i) => (
             <motion.div
               key={label}
@@ -83,7 +83,7 @@ export default function ValuesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10"
         >
           
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">

@@ -32,7 +32,7 @@ export default function Footer() {
     /* Light ground and border, matching the header. */
     <footer className="bg-white border-t border-[#D0DAF8] text-[#0C2298]">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-6">

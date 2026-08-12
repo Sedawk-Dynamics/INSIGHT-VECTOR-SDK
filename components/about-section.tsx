@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 lg:py-20 bg-white">
+    <section id="about" className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Split layout: copy on the left, image on the right */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -72,7 +72,7 @@ export default function AboutSection() {
                 alt="Strategic advisory session at Insight Vector"
                 width={600}
                 height={480}
-                className="w-full h-[440px] object-cover"
+                className="w-full h-[380px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0C2298]/15 to-transparent" />
             </div>

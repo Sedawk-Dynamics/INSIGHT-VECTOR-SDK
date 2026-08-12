@@ -183,7 +183,7 @@ export default function FeaturedInsightsContent() {
       </section>
 
       {/* Articles & Blogs — the newsletter, rebuilt in our own design language */}
-      <section className="pb-16 lg:pb-20 bg-white" aria-labelledby="articles-blogs">
+      <section className="pb-12 lg:pb-16 bg-white" aria-labelledby="articles-blogs">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             id="articles-blogs"
@@ -254,7 +254,7 @@ export default function FeaturedInsightsContent() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 lg:py-20 bg-[#EEF2FF]" aria-labelledby="newsletter">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]" aria-labelledby="newsletter">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             variants={fadeUp}
@@ -292,7 +292,7 @@ export default function FeaturedInsightsContent() {
       </section>
 
       {/* LinkedIn Articles */}
-      <section className="py-16 lg:py-24 bg-white" aria-labelledby="linkedin-articles">
+      <section className="py-12 lg:py-16 bg-white" aria-labelledby="linkedin-articles">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             id="linkedin-articles"
@@ -379,7 +379,7 @@ export default function FeaturedInsightsContent() {
       </section>
 
       {/* CTA */}
-      <section className="pb-16 lg:pb-20 bg-white">
+      <section className="pb-12 lg:pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <CtaBanner />
         </div>

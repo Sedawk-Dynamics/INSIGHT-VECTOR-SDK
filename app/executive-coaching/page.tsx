@@ -176,7 +176,7 @@ export default function ExecutiveCoachingPage() {
       </section>
 
       {/* Coaching Areas */}
-      <section className="py-16 bg-[#EEF2FF]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
@@ -218,7 +218,7 @@ export default function ExecutiveCoachingPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
@@ -246,7 +246,7 @@ export default function ExecutiveCoachingPage() {
       </section>
 
       {/* The Insight Vector Difference */}
-      <section className="py-16 bg-[#EEF2FF]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -333,7 +333,7 @@ export default function ExecutiveCoachingPage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-16 bg-[#0C2298]">
+      <section className="py-12 lg:py-16 bg-[#0C2298]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div

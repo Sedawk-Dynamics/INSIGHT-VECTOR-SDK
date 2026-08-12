@@ -48,7 +48,7 @@ const fadeUp = {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-16 lg:py-20 bg-white">
+    <section id="services" className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -56,7 +56,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10"
         >
           {/* Same 60px serif treatment as "Built on a Simple Belief". */}
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">

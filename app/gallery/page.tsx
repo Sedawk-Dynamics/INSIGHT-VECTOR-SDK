@@ -389,7 +389,7 @@ export default function GalleryPage() {
           caption beneath, so rows and columns line up. The photos mix portrait
           posters with landscape shots, so the image is contained (not cropped)
           inside the tile: nothing gets cut off and the cards still align. */}
-      <section className="pb-20 lg:pb-24 bg-white">
+      <section className="pb-12 lg:pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -440,7 +440,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Media Coverage & Articles */}
-      <section className="py-20 lg:py-24 bg-[#EEF2FF]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -461,7 +461,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Podcasts */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -482,7 +482,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Media Interviews */}
-      <section className="py-20 lg:py-24 bg-[#EEF2FF]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -503,7 +503,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Appointments & Recognition */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -524,7 +524,7 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-16 lg:pb-20 pt-4 bg-white">
+      <section className="pb-12 lg:pb-16 pt-4 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <CtaBanner />
         </div>

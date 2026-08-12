@@ -66,7 +66,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-16 lg:py-20 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -74,14 +74,13 @@ export default function WhyChooseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10"
         >
-          
-          <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
-           Insight Vector
+          <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
+            Insight Vector
           </h2>
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-           Because Complex Challenges Need More Than Textbook Answers
+          <span className="block mt-3 text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
+            Because Complex Challenges Need More Than Textbook Answers
           </span>
         </motion.div>
 
