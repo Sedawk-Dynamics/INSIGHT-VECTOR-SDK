@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-12 lg:py-16 bg-white">
+    <section id="about" className="pt-10 pb-8 lg:pt-12 lg:pb-10 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Split layout: copy on the left, image on the right */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -45,13 +45,14 @@ export default function AboutSection() {
               </p>
             </motion.blockquote>
 
-            <p className="font-sans text-[#0C2298] leading-relaxed font-normal text-lg">
+            {/* Both body paragraphs share one font and one size. */}
+            <p className="font-sans text-base text-[#0C2298] leading-relaxed font-normal">
               Founded by Santanu Sengupta, a global business leader, Board Director, strategic advisor
               and ICF-credentialed Executive Coach, Insight Vector brings together over three decades
               of leadership experience across businesses, markets, cultures and transformation journeys.
             </p>
 
-            <p className="font-sans text-[#0C2298] leading-relaxed font-normal">
+            <p className="font-sans text-base text-[#0C2298] leading-relaxed font-normal">
               We work across three core areas: strategic advisory, executive coaching and mentoring, and
               leadership development. Across all three, our approach is practical, personalised and
               grounded in real-world experience.

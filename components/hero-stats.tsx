@@ -29,11 +29,14 @@ export default function HeroStats({ className = '' }: { className?: string }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] px-5 py-4 hover:border-[#537AED] transition-colors duration-300"
+          className="flex flex-col rounded-2xl bg-[#EEF2FF] border border-[#D0DAF8] px-5 py-4 hover:border-[#537AED] transition-colors duration-300"
         >
-          <div className="flex items-center gap-2 mb-1">
-            <Icon size={15} className="text-[#0C2298] shrink-0" />
-            <span className="text-2xl font-semibold text-[#0C2298] leading-none">{value}</span>
+          {/* The value row is min-height'd for two lines and the icon is pinned to
+              the first line, so all three boxes share the same internal baselines
+              even though "30+ Years" wraps and "C-Suite" does not. */}
+          <div className="flex items-start gap-2 mb-2 min-h-[3.75rem]">
+            <Icon size={15} className="text-[#0C2298] shrink-0 mt-1.5" />
+            <span className="text-2xl font-semibold text-[#0C2298] leading-tight">{value}</span>
           </div>
           <span className="text-base text-[#0C2298] font-medium tracking-wide leading-snug block">
             {label}

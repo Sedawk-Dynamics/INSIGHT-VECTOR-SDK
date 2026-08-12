@@ -69,10 +69,11 @@ export default function ValuesSection() {
               transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="rounded-3xl p-8 lg:p-10 border bg-[#EEF2FF] border-[#D0DAF8] text-[#0C2298]"
             >
-              <span className="text-xl font-semibold tracking-widest uppercase mb-4 block text-[#0C2298]">
+              {/* Same 60px serif treatment as every other section heading. */}
+              <span className="font-serif text-5xl lg:text-6xl leading-tight mb-4 block text-[#0C2298]">
                 {label}
               </span>
-              <p className="font-serif text-2xl lg:text-3xl leading-snug text-[#0C2298]">{text}</p>
+              <p className="font-sans text-base leading-relaxed text-[#0C2298]">{text}</p>
             </motion.div>
           ))}
         </div>

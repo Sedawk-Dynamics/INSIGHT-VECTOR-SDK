@@ -364,7 +364,7 @@ export default function GalleryPage() {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-32 lg:pt-40 pb-14 bg-gradient-to-b from-[#EEF2FF] to-white">
+      <section className="pt-28 lg:pt-32 pb-14 bg-gradient-to-b from-[#EEF2FF] to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

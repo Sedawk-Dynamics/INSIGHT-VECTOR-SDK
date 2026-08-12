@@ -48,7 +48,7 @@ const fadeUp = {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-12 lg:py-16 bg-white">
+    <section id="services" className="pt-8 pb-12 lg:pt-10 lg:pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -108,19 +108,20 @@ export default function ServicesSection() {
                   {service.description}
                 </p>
 
-                {/* Tags — min-height is sized for the longest list (five rows) so
-                    every card's tags start on the same line and "Learn More"
-                    sits at the same baseline. */}
-                <div className="flex flex-wrap gap-2 mb-6 min-h-[12rem] content-start">
+                {/* One bullet per line. Every card carries five, so the lists are
+                    the same height and "Learn More" lands on a shared baseline
+                    without needing a min-height to pad out the short ones. */}
+                <ul className="mb-6 space-y-2">
                   {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-[#EEF2FF] text-[#0C2298] text-xs font-medium rounded-full"
-                    >
-                      {tag}
-                    </span>
+                    <li key={tag} className="flex items-start gap-2.5">
+                      <span
+                        aria-hidden="true"
+                        className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[#537AED]"
+                      />
+                      <span className="font-sans text-base text-[#0C2298] leading-snug">{tag}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
                 {/* Link — each card opens its own service page */}
                 <Link

@@ -72,7 +72,7 @@ export default function ExecutiveCoachingPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-white to-white pt-32 lg:pt-40">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-white to-white pt-28 lg:pt-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -94,10 +94,11 @@ export default function ExecutiveCoachingPage() {
                 initial="hidden"
                 animate="visible"
                 custom={1}
-                className="font-serif text-5xl lg:text-6xl font-semibold text-[#0C2298] leading-[1.1] text-balance mb-6"
+                className="font-serif text-[clamp(2rem,3.6vw,3.25rem)] font-semibold text-[#0C2298] leading-[1.15] mb-6"
               >
-                Helping Leaders Grow with{' '}
-                <span className="text-[#537AED]">Confidence and Clarity.</span>
+                <span className="block">Helping Leaders Grow with</span>
+                {/* Held on one line so "Clarity." never drops to a third row. */}
+                <span className="block whitespace-nowrap text-[#537AED]">Confidence and Clarity.</span>
               </motion.h1>
 
               <motion.p
@@ -333,7 +334,7 @@ export default function ExecutiveCoachingPage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-12 lg:py-16 bg-[#0C2298]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -342,7 +343,7 @@ export default function ExecutiveCoachingPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h2 className="font-serif text-5xl lg:text-6xl text-white leading-tight mb-6 text-balance">
+              <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
                 Who We Work With
               </h2>
               <ul className="space-y-4">
@@ -356,8 +357,8 @@ export default function ExecutiveCoachingPage() {
                     custom={i * 0.5}
                     className="flex items-center gap-3"
                   >
-                    <CheckCircle2 size={20} className="text-[#A8C0FF] shrink-0" />
-                    <span className="text-white font-medium">{item}</span>
+                    <CheckCircle2 size={20} className="text-[#537AED] shrink-0" />
+                    <span className="text-[#0C2298] font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -369,22 +370,22 @@ export default function ExecutiveCoachingPage() {
               whileInView="visible"
               viewport={{ once: true }}
               custom={1}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20"
+              className="bg-white rounded-3xl p-10 border border-[#D0DAF8] shadow-[0_8px_40px_rgba(83,122,237,0.10)]"
             >
-              <h3 className="font-serif text-3xl font-semibold text-white mb-4 text-balance">
+              <h3 className="font-serif text-3xl font-semibold text-[#0C2298] mb-4 text-balance">
                 Better Leaders. Better Decisions.
               </h3>
-              <p className="text-white text-base leading-relaxed mb-3">
+              <p className="text-[#0C2298] text-base leading-relaxed mb-3">
                 Leadership is not defined by having all the answers. It is defined by the quality of
                 judgement behind every decision.
               </p>
-              <p className="text-white text-base leading-relaxed mb-8">
+              <p className="text-[#0C2298] text-base leading-relaxed mb-8">
                 We help leaders build the confidence, capability and perspective to lead with
                 greater impact.
               </p>
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-base font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-base font-semibold rounded-full hover:bg-[#0C2298] hover:text-white transition-all duration-300 shadow-lg"
               >
                 Let&apos;s Talk <ArrowRight size={16} />
               </Link>

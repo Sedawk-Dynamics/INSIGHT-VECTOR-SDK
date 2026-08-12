@@ -79,7 +79,7 @@ export default function StrategicAdvisoryPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-0 relative overflow-hidden">
+      <section className="pt-28 lg:pt-32 pb-0 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EEF2FF] via-white to-white pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center pb-16">
@@ -326,7 +326,7 @@ export default function StrategicAdvisoryPage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-12 lg:py-16 bg-[#0C2298]">
+      <section className="py-12 lg:py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -335,10 +335,10 @@ export default function StrategicAdvisoryPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h2 className="font-serif text-5xl lg:text-6xl text-white leading-tight mb-6 text-balance">
+              <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
                 Who We Work With
               </h2>
-              <p className="text-white text-base leading-relaxed mb-8 text-pretty">
+              <p className="text-[#0C2298] text-base leading-relaxed mb-8 text-pretty">
                 We partner with ambitious leaders and organisations at critical inflection points —
                 where clarity of strategy and quality of advice can make all the difference.
               </p>
@@ -353,8 +353,8 @@ export default function StrategicAdvisoryPage() {
                     custom={i * 0.5}
                     className="flex items-center gap-3"
                   >
-                    <CheckCircle2 size={20} className="text-[#A8C0FF] shrink-0" />
-                    <span className="text-white font-medium">{item}</span>
+                    <CheckCircle2 size={20} className="text-[#537AED] shrink-0" />
+                    <span className="text-[#0C2298] font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -367,21 +367,21 @@ export default function StrategicAdvisoryPage() {
               whileInView="visible"
               viewport={{ once: true }}
               custom={1}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20"
+              className="bg-white rounded-3xl p-10 border border-[#D0DAF8] shadow-[0_8px_40px_rgba(83,122,237,0.10)]"
             >
-              <h3 className="font-serif text-3xl font-semibold text-white mb-4 text-balance">
+              <h3 className="font-serif text-3xl font-semibold text-[#0C2298] mb-4 text-balance">
                 Better decisions build stronger businesses.
               </h3>
-              <p className="text-white text-base leading-relaxed mb-2">
+              <p className="text-[#0C2298] text-base leading-relaxed mb-2">
                 Let&apos;s navigate your next stage of growth together.
               </p>
               {/* Kept on its own line so the tagline never breaks mid-sentence. */}
-              <p className="text-white text-base leading-relaxed mb-8 lg:whitespace-nowrap">
+              <p className="text-[#0C2298] text-base leading-relaxed mb-8 lg:whitespace-nowrap">
                 Clarity in Complexity. Direction for What Comes Next.
               </p>
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-sm font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#537AED] text-white text-sm font-semibold rounded-full hover:bg-[#0C2298] hover:text-white transition-all duration-300 shadow-lg"
               >
                 Let&apos;s Talk <ArrowRight size={16} />
               </Link>

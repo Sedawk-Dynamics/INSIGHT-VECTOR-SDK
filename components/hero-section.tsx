@@ -25,7 +25,7 @@ const fadeRight = {
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative flex items-center overflow-hidden bg-white pt-20">
+    <section id="home" className="relative flex items-center overflow-hidden bg-white pt-16">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -44,7 +44,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-8 pb-6 lg:pt-10 lg:pb-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-6">

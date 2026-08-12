@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react'
 
 export default function FounderSection() {
   return (
-    <section id="founder" className="py-12 lg:py-16 bg-white">
+    <section id="founder" className="pt-10 pb-8 lg:pt-12 lg:pb-10 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -51,7 +51,7 @@ export default function FounderSection() {
               <p className="font-serif text-xl text-[#0C2298]">Santanu Sengupta</p>
               <p className="text-sm text-[#0C2298] font-medium font-sans">Founder, Insight Vector</p>
               <p className="text-xs text-[#0C2298] font-sans mt-1">
-                Former MD,Wells Fargo Bank
+                Former MD Wells Fargo Bank
                 <br/>
                 Board Director
                 <br/> 
@@ -72,7 +72,9 @@ export default function FounderSection() {
             <div className="flex items-center gap-3 mb-6">
               {/* Rotated so the glyph reads as an opening quote, not a closing one. */}
               <Quote size={28} className="text-[#0C2298] rotate-180" aria-hidden="true" />
-              <span className="font-serif text-2xl text-[#0C2298] italic">Insight matters. But what we do with it matters more.</span>
+              <span className="font-serif text-3xl lg:text-4xl font-semibold text-[#0C2298] italic leading-snug">
+                Insight matters. But what we do with it matters more.
+              </span>
             </div>
 
             {[
