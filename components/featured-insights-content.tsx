@@ -1,11 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, CalendarDays, Mail, Users } from 'lucide-react'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import CtaBanner from '@/components/cta-banner'
 
 type Insight = {
   title: string
@@ -19,7 +19,6 @@ const NEWSLETTER_URL =
   'https://www.linkedin.com/newsletters/boardroom-beyond-7334260123055321088/'
 /** Boardroom & Beyond artwork, used for the newsletter card and posts with no image of their own. */
 const BOARDROOM_IMAGE = '/boardroom-and-beyond.png'
-const CALENDLY_URL = 'https://calendly.com/sengupta-santanu/new-meeting?back=1'
 
 /**
  * Posts are listed in the same order as the source page. Dates are decoded from
@@ -380,36 +379,9 @@ export default function FeaturedInsightsContent() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32 bg-white">
+      <section className="pb-16 lg:pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="rounded-3xl bg-[#0C2298] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="max-w-2xl">
-              <h2 className="font-serif text-3xl lg:text-4xl text-white mb-3 text-balance">
-                Open to Meaningful Conversations Around Governance, Leadership &amp; Strategic
-                Transformation
-              </h2>
-              <p className="font-sans text-white/60 font-normal">
-                For board roles, advisory mandates, or executive coaching &amp; mentoring and
-                speaking engagements, you may reach out directly.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#537AED] text-white font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
-              >
-                Connect for Strategic Conversations <ArrowRight size={16} />
-              </a>
-              <Link
-                href="/#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:border-white hover:bg-white hover:text-[#0C2298] transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
+          <CtaBanner />
         </div>
       </section>
 

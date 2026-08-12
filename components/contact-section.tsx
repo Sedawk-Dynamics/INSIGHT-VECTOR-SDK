@@ -30,14 +30,15 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto mb-12"
-        > 
-          <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-4 text-balance">
-             Partner with Us
-          </h2>
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-           Start a Conversation
-          </span>
-          
+        >
+          <div className="mb-4">
+            <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
+              Contact Us
+            </h2>
+            <span className="block mt-3 text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
+              Start a Conversation
+            </span>
+          </div>
           <p className="font-sans text-[#0C2298] font-normal leading-relaxed">
             Whether you are navigating a strategic challenge, a leadership transition or are simply curious about how we work, we would welcome a conversation.
           </p>

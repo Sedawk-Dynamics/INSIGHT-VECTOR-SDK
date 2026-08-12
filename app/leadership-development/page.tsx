@@ -120,7 +120,7 @@ export default function LeadershipDevelopmentPage() {
                   href="/#contact"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0C2298] text-white text-base font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-md hover:shadow-[0_4px_20px_rgba(83,122,237,0.4)]"
                 >
-                  Partner with Us <ArrowRight size={16} />
+                  Contact Us <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="/#services"
@@ -156,33 +156,27 @@ export default function LeadershipDevelopmentPage() {
           </div>
         </div>
 
-        {/* Wave divider */}
-        <div className="w-full overflow-hidden leading-none">
-          <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
-            <path d="M0 48 C360 0 1080 0 1440 48 L1440 48 L0 48 Z" fill="#F8FAFF" />
-          </svg>
-        </div>
       </section>
 
       {/* Where We Build Capability */}
-      <section className="py-24 bg-[#F8FAFF]">
+      <section className="py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
+            <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
               Our Programmes
-            </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] text-balance">
-              Where We Build Capability
             </h2>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
+              Where We Build Capability
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {capabilities.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -210,7 +204,7 @@ export default function LeadershipDevelopmentPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
@@ -218,10 +212,7 @@ export default function LeadershipDevelopmentPage() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
-              How We Work
-            </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] mb-8 text-balance">
+            <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-8 text-balance">
               Our Approach
             </h2>
             <p className="text-lg text-[#0C2298] leading-relaxed mb-5 text-pretty">
@@ -242,7 +233,7 @@ export default function LeadershipDevelopmentPage() {
       </section>
 
       {/* The Insight Vector Difference */}
-      <section className="py-24 bg-[#F8FAFF]">
+      <section className="py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -276,12 +267,12 @@ export default function LeadershipDevelopmentPage() {
                 viewport={{ once: true }}
                 custom={0}
               >
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
-                  Our Edge
-                </p>
-                <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] mb-6 text-balance">
-                  The Insight Vector Difference
-                </h2>
+                <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
+              Our Edge
+            </h2>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
+              The Insight Vector Difference
+            </p>
               </motion.div>
 
               <motion.p
@@ -339,7 +330,7 @@ export default function LeadershipDevelopmentPage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-24 bg-[#0C2298]">
+      <section className="py-16 bg-[#0C2298]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -348,10 +339,7 @@ export default function LeadershipDevelopmentPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#A8C0FF] mb-3">
-                Our Clients
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-white mb-6 text-balance">
+              <h2 className="font-serif text-5xl lg:text-6xl text-white leading-tight mb-6 text-balance">
                 Who We Work With
               </h2>
               <ul className="space-y-4">
@@ -383,11 +371,11 @@ export default function LeadershipDevelopmentPage() {
               <h3 className="font-serif text-3xl font-semibold text-white mb-4 text-balance">
                 Better Leaders. Stronger Organisations.
               </h3>
-              <p className="text-[#A8C0FF] text-base leading-relaxed mb-3">
+              <p className="text-white text-base leading-relaxed mb-3">
                 Leadership capability is no longer a competitive advantage — it is a business
                 imperative.
               </p>
-              <p className="text-[#A8C0FF] text-base leading-relaxed mb-8">
+              <p className="text-white text-base leading-relaxed mb-8">
                 We help leaders and organisations build the judgement, capabilities and confidence
                 to navigate growth, complexity and transformation.
               </p>

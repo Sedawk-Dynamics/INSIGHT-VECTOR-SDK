@@ -82,7 +82,7 @@ export default function StrategicAdvisoryPage() {
       <section className="pt-32 pb-0 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EEF2FF] via-white to-white pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center pb-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center pb-16">
             {/* Left */}
             <div>
               <motion.div
@@ -145,7 +145,7 @@ export default function StrategicAdvisoryPage() {
                   href="#contact-us"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0C2298] text-white text-sm font-semibold rounded-full hover:bg-[#537AED] transition-all duration-300 shadow-md hover:shadow-[0_4px_20px_rgba(83,122,237,0.4)]"
                 >
-                  Partner with Us <ArrowRight size={16} />
+                  Contact Us <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="/#services"
@@ -181,33 +181,27 @@ export default function StrategicAdvisoryPage() {
           </div>
         </div>
 
-        {/* Wave divider */}
-        <div className="w-full overflow-hidden leading-none">
-          <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
-            <path d="M0 48 C360 0 1080 0 1440 48 L1440 48 L0 48 Z" fill="#F8FAFF" />
-          </svg>
-        </div>
       </section>
 
       {/* Where We Add Value */}
-      <section className="py-24 bg-[#F8FAFF]">
+      <section className="py-16 bg-[#EEF2FF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
+            <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
               Our Expertise
-            </p>
-            <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] text-balance">
-              Where We Add Value
             </h2>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
+              Where We Add Value
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -235,7 +229,7 @@ export default function StrategicAdvisoryPage() {
       </section>
 
       {/* The Insight Vector Difference */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -268,12 +262,12 @@ export default function StrategicAdvisoryPage() {
                 viewport={{ once: true }}
                 custom={0}
               >
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#0C2298] mb-3">
-                  Our Edge
-                </p>
-                <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-[#0C2298] mb-6 text-balance">
-                  The Insight Vector Difference
-                </h2>
+                <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-6 text-balance">
+              Our Edge
+            </h2>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-[#0C2298]">
+              The Insight Vector Difference
+            </p>
               </motion.div>
 
               <motion.p
@@ -332,7 +326,7 @@ export default function StrategicAdvisoryPage() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-24 bg-[#0C2298]">
+      <section className="py-16 bg-[#0C2298]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -341,13 +335,10 @@ export default function StrategicAdvisoryPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#A8C0FF] mb-3">
-                Our Clients
-              </p>
-              <h2 className="font-serif text-4xl lg:text-5xl font-semibold text-white mb-6 text-balance">
+              <h2 className="font-serif text-5xl lg:text-6xl text-white leading-tight mb-6 text-balance">
                 Who We Work With
               </h2>
-              <p className="text-[#A8C0FF] text-base leading-relaxed mb-8 text-pretty">
+              <p className="text-white text-base leading-relaxed mb-8 text-pretty">
                 We partner with ambitious leaders and organisations at critical inflection points —
                 where clarity of strategy and quality of advice can make all the difference.
               </p>
@@ -381,9 +372,12 @@ export default function StrategicAdvisoryPage() {
               <h3 className="font-serif text-3xl font-semibold text-white mb-4 text-balance">
                 Better decisions build stronger businesses.
               </h3>
-              <p className="text-[#A8C0FF] text-base leading-relaxed mb-8">
-                Let&apos;s navigate your next stage of growth together. Clarity in Complexity.
-                Direction for What Comes Next.
+              <p className="text-white text-base leading-relaxed mb-2">
+                Let&apos;s navigate your next stage of growth together.
+              </p>
+              {/* Kept on its own line so the tagline never breaks mid-sentence. */}
+              <p className="text-white text-base leading-relaxed mb-8 lg:whitespace-nowrap">
+                Clarity in Complexity. Direction for What Comes Next.
               </p>
               <Link
                 href="/#contact"

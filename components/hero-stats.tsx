@@ -3,10 +3,18 @@
 import { motion } from 'framer-motion'
 import { Award, Briefcase, Globe } from 'lucide-react'
 
-const stats = [
-  { value: '30+', label: 'Years of Global Leadership', icon: Award },
-  { value: 'C-Suite', label: 'Experience', icon: Briefcase },
-  { value: '15+', label: 'Countries', icon: Globe },
+type Stat = {
+  value: string
+  label: string
+  /** Optional second line, e.g. the founder's former role. */
+  note?: string
+  icon: typeof Award
+}
+
+const stats: Stat[] = [
+  { value: '30+ Years', label: 'Global Banking, Board & Strategic Advisory', icon: Award },
+  { value: 'C-Suite', label: 'Experience', note: 'Former MD, Wells Fargo Bank', icon: Briefcase },
+  { value: '15 Countries', label: 'Global Leadership', icon: Globe },
 ]
 
 /**
@@ -15,7 +23,7 @@ const stats = [
 export default function HeroStats({ className = '' }: { className?: string }) {
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 ${className}`}>
-      {stats.map(({ value, label, icon: Icon }, i) => (
+      {stats.map(({ value, label, note, icon: Icon }, i) => (
         <motion.div
           key={label}
           initial={{ opacity: 0, y: 20 }}
@@ -30,6 +38,11 @@ export default function HeroStats({ className = '' }: { className?: string }) {
           <span className="text-base text-[#0C2298] font-medium tracking-wide leading-snug block">
             {label}
           </span>
+          {note && (
+            <span className="mt-1 block text-base text-[#0C2298] font-semibold leading-snug">
+              {note}
+            </span>
+          )}
         </motion.div>
       ))}
     </div>

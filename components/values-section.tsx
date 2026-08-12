@@ -138,7 +138,7 @@ export default function ValuesSection() {
               href="#contact"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200"
             >
-              Partner with Us →
+              Contact Us →
             </a>
           </motion.div>
         </div>

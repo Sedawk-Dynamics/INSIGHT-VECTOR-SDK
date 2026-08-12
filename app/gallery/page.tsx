@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink, Play, X } from 'lucide-react'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import CtaBanner from '@/components/cta-banner'
 
 type MediaLink = { label: string; href: string }
 
@@ -82,14 +82,6 @@ const photos = [
     height: 733,
     caption: 'Speaker at Microsoft forum',
     href: 'https://www.linkedin.com/posts/santanu-sengupta_artificialintelligence-artificialintelligenceforbusiness-ugcPost-7102893389980835841-ZBfG',
-  },
-  {
-    src: '/Gallary%20image/10.webp',
-    width: 960,
-    height: 578,
-    caption: 'IIT Mumbai guest lecture',
-    date: '14 February 2026',
-    href: 'https://www.linkedin.com/posts/santanu-sengupta_leadership-careerstrategy-purposedriven-activity-7432265604511899648-SIKE',
   },
 ]
 
@@ -225,39 +217,6 @@ const podcasts: MediaItem[] = [
     image: '/media/podcast-power-of-knowing.jpg',
     links: [{ label: 'Watch on YouTube', href: 'https://www.youtube.com/watch?v=nCEtuY68fTM' }],
   },
-  {
-    title: 'On board governance, risk and corporate governance',
-    publication: 'Podcast I',
-    image: '/founder-portrait.jpg',
-    links: [
-      {
-        label: 'Listen on LinkedIn',
-        href: 'https://www.linkedin.com/posts/santanu-sengupta_boardgovernance-riskmanagement-corporategovernance-activity-7449660259813474304-3Ddg',
-      },
-    ],
-  },
-  {
-    title: 'Artificial intelligence is already transforming the boardroom',
-    publication: 'Podcast II',
-    image: '/founder-portrait.jpg',
-    links: [
-      {
-        label: 'Listen on LinkedIn',
-        href: 'https://www.linkedin.com/posts/santanu-sengupta_artificial-intelligence-is-already-transforming-activity-7440964272526086145-KaU9',
-      },
-    ],
-  },
-  {
-    title: 'Crisis leadership and leading under uncertainty',
-    publication: 'Podcast III',
-    image: '/founder-portrait.jpg',
-    links: [
-      {
-        label: 'Listen on LinkedIn',
-        href: 'https://www.linkedin.com/posts/santanu-sengupta_crisisleadership-leadershipunderuncertainty-activity-7430453647060361216-IqfG',
-      },
-    ],
-  },
 ]
 
 const appointments: MediaItem[] = [
@@ -289,16 +248,6 @@ const appointments: MediaItem[] = [
       {
         label: 'Read more',
         href: 'https://www.linkedin.com/posts/santanu-sengupta_nexus-europe-appoints-advisory-board-to-scale-activity-7435895327745925120-Rg06',
-      },
-    ],
-  },
-  {
-    title: 'KPMG Independent Director Certification',
-    publication: 'LinkedIn',
-    links: [
-      {
-        label: 'Read more',
-        href: 'https://www.linkedin.com/posts/santanu-sengupta_independentdirector-corporategovernance-kpmg-ugcPost-7272452642675580928-SQKs',
       },
     ],
   },
@@ -430,8 +379,7 @@ export default function GalleryPage() {
               Gallery
             </h1>
             <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-normal">
-              Speaking engagements, panels, podcasts and press coverage from our work with founders,
-              boards and senior leaders.
+              Speaking engagements, panels, podcasts and press coverage.
             </p>
           </motion.div>
         </div>
@@ -483,17 +431,6 @@ export default function GalleryPage() {
                   <p className="font-sans text-base text-[#0C2298] leading-snug">{photo.caption}</p>
                   {photo.date && (
                     <p className="font-sans text-base text-[#0C2298] opacity-70 mt-1">{photo.date}</p>
-                  )}
-                  {photo.href && (
-                    <a
-                      href={photo.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-auto pt-3 inline-flex items-center gap-2 text-base font-semibold text-[#0C2298] hover:text-[#537AED] transition-colors duration-200"
-                    >
-                      Read more
-                      <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
-                    </a>
                   )}
                 </div>
               </motion.div>
@@ -587,26 +524,9 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-24 lg:pb-32 pt-4 bg-white">
+      <section className="pb-16 lg:pb-20 pt-4 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="rounded-3xl bg-[#0C2298] p-10 lg:p-14 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="max-w-2xl">
-              <h2 className="font-serif text-3xl lg:text-4xl text-white mb-3 text-balance">
-                Open to Meaningful Conversations Around Governance, Leadership &amp; Strategic
-                Transformation
-              </h2>
-              <p className="font-sans text-white/60 font-normal">
-                For board roles, advisory mandates, or executive coaching &amp; mentoring and
-                speaking engagements, you may reach out directly.
-              </p>
-            </div>
-            <Link
-              href="/#contact"
-              className="shrink-0 inline-flex items-center gap-2 px-10 py-4 bg-[#537AED] text-white font-semibold rounded-full hover:bg-white hover:text-[#0C2298] transition-all duration-300 shadow-lg"
-            >
-              Connect for Strategic Conversations <ArrowRight size={16} />
-            </Link>
-          </div>
+          <CtaBanner />
         </div>
       </section>
 
