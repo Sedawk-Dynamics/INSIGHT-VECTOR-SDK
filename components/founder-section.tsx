@@ -69,10 +69,16 @@ export default function FounderSection() {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-3 space-y-6 pt-0 lg:pt-4"
           >
-            <div className="flex items-center gap-3 mb-6">
+            {/* items-start keeps the quote mark on the first line rather than
+                floating to the vertical centre once the text wraps. */}
+            <div className="flex items-start gap-3 mb-6">
               {/* Rotated so the glyph reads as an opening quote, not a closing one. */}
-              <Quote size={28} className="text-[#0C2298] rotate-180" aria-hidden="true" />
-              <span className="font-serif text-3xl lg:text-4xl font-semibold text-[#0C2298] italic leading-snug">
+              <Quote
+                size={24}
+                className="text-[#0C2298] rotate-180 shrink-0 mt-1.5"
+                aria-hidden="true"
+              />
+              <span className="font-serif text-2xl lg:text-3xl font-semibold text-[#0C2298] italic leading-snug">
                 Insight matters. But what we do with it matters more.
               </span>
             </div>

@@ -33,7 +33,7 @@ const services = [
     tagline: 'Building capability for a rapidly changing world.',
     description:
       'We deliver high-impact training, workshops and leadership programmes connecting emerging ideas with business realities. Our programmes help leaders and organisations build the capabilities, judgement and resilience needed for tomorrow.',
-    tags: ['Leadership', 'Integrated Risk', 'ESG & Sustainability', 'Responsible AI', 'Workshops'],
+    tags: ['Leadership', 'Integrated Risk Management', 'ESG & Sustainability', 'Responsible AI', 'Workshops'],
   },
 ]
 
