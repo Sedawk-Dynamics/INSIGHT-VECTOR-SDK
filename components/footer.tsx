@@ -9,7 +9,7 @@ const footerLinks = {
     { label: 'About Insight Vector', href: '/#about' },
     { label: 'Our Founder', href: '/#founder' },
     { label: 'Our Values', href: '/#about' },
-    { label: 'Why Choose Us', href: '/#about' },
+    { label: 'Why Insight Vector', href: '/#about' },
   ],
   Services: [
     { label: 'Strategic Advisory', href: '/strategic-advisory' },
@@ -44,7 +44,11 @@ export default function Footer() {
               className="h-9 w-auto object-contain"
             />
             <p className="font-sans text-sm text-[#0C2298] leading-relaxed font-normal max-w-xs">
-              Clarity for Complexity. Direction for What Comes Next. A founder-led strategic advisory, executive coaching and leadership development firm.
+              Clarity for Complexity
+              <br />
+              Direction for What Comes Next.
+              <br />
+              A founder-led strategic advisory, executive coaching and leadership development firm.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -85,24 +89,20 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div className="mt-12 pt-8 border-t border-[#D0DAF8]">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <h4 className="font-serif text-xl text-[#0C2298] mb-1">Stay Informed</h4>
-              <p className="text-sm text-[#0C2298] font-sans font-normal">
-                Receive occasional insights on strategy, leadership and risk.
-              </p>
-            </div>
+          <div>
+            <h4 className="font-serif text-xl font-bold text-[#0C2298] mb-1">Stay Informed</h4>
+            <p className="text-sm text-[#0C2298] font-sans font-normal">
+              Receive occasional insights on strategy, leadership and risk.
+            </p>
             {/* Subscribing happens on LinkedIn, so this is a link rather than a form. */}
-            <div className="flex md:justify-end">
-              <a
-                href={NEWSLETTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-[#537AED] text-white text-sm font-semibold rounded-xl hover:bg-[#0C2298] transition-all duration-200"
-              >
-                Subscribe
-              </a>
-            </div>
+            <a
+              href={NEWSLETTER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex px-6 py-3 bg-[#537AED] text-white text-sm font-semibold rounded-xl hover:bg-[#0C2298] transition-all duration-200"
+            >
+              Subscribe
+            </a>
           </div>
         </div>
       </div>

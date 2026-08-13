@@ -160,7 +160,7 @@ export default function FeaturedInsightsContent() {
       <Navbar />
 
       {/* Page heading / intro */}
-      <section className="pt-32 lg:pt-40 pb-14 bg-gradient-to-b from-[#EEF2FF] to-white">
+      <section className="pt-28 lg:pt-32 pb-10 bg-gradient-to-b from-[#EEF2FF] to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -168,16 +168,13 @@ export default function FeaturedInsightsContent() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-3xl"
           >
-            <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-              Featured Insights
-            </span>
-            <h1 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-5 text-balance">
+            <h1 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
               Featured Insights
             </h1>
-            <p className="font-sans text-lg text-[#0C2298] leading-relaxed font-normal">
-              Perspectives on strategy, governance, risk and leadership — written for board members,
-              founders and senior leaders navigating an increasingly complex world.
-            </p>
+            {/* Kicker sits below the heading, matching every other section. */}
+            <span className="block mt-3 text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
+              Perspectives on Strategy, Governance, Risk and Leadership
+            </span>
           </motion.div>
         </div>
       </section>
@@ -192,7 +189,7 @@ export default function FeaturedInsightsContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="font-serif text-3xl lg:text-4xl text-[#0C2298] mb-10"
+            className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-10"
           >
             Articles &amp; Blogs
           </motion.h2>
@@ -206,7 +203,7 @@ export default function FeaturedInsightsContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="group grid md:grid-cols-3 gap-0 overflow-hidden rounded-3xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_16px_60px_rgba(83,122,237,0.15)] transition-all duration-300"
+            className="group grid md:grid-cols-3 gap-0 overflow-hidden rounded-2xl border border-[#D0DAF8] bg-white hover:border-[#537AED] hover:shadow-[0_16px_60px_rgba(83,122,237,0.15)] transition-all duration-300"
           >
             <span className="relative block aspect-video md:aspect-auto md:min-h-[15rem] bg-[#EEF2FF] overflow-hidden">
               <Image
@@ -219,11 +216,11 @@ export default function FeaturedInsightsContent() {
             </span>
 
             <span className="md:col-span-2 flex flex-col p-8 lg:p-10">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#0C2298] mb-3">
-                Newsletter
-              </span>
-              <span className="font-serif text-3xl lg:text-4xl text-[#0C2298] leading-snug mb-3">
+              <span className="font-serif text-3xl lg:text-4xl text-[#0C2298] leading-snug">
                 Boardroom &amp; Beyond
+              </span>
+              <span className="mt-2 mb-3 text-xs font-semibold tracking-widest uppercase text-[#0C2298]">
+                Newsletter
               </span>
               <span className="font-sans text-base text-[#0C2298] leading-relaxed mb-6">
                 The Strategic Edge: Boardroom &amp; Beyond — trusted perspectives at the intersection
@@ -301,7 +298,7 @@ export default function FeaturedInsightsContent() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="font-serif text-3xl lg:text-4xl text-[#0C2298] mb-10"
+            className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight mb-10"
           >
             LinkedIn Articles
           </motion.h2>

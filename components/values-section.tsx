@@ -86,13 +86,9 @@ export default function ValuesSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto mb-10"
         >
-          
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
-           Our Values
+            Our Values
           </h2>
-          <span className="text-xs font-semibold text-[#0C2298] tracking-widest uppercase mb-4 block">
-            Core Values
-          </span>
         </motion.div>
 
         {/* Values grid */}

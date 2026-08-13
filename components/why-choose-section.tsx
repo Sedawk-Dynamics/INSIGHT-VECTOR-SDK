@@ -77,11 +77,8 @@ export default function WhyChooseSection() {
           className="max-w-3xl mb-10"
         >
           <h2 className="font-serif text-5xl lg:text-6xl text-[#0C2298] leading-tight text-balance">
-            Insight Vector
+            Why Insight Vector?
           </h2>
-          <span className="block mt-3 text-xs font-semibold text-[#0C2298] tracking-widest uppercase">
-            Because Complex Challenges Need More Than Textbook Answers
-          </span>
         </motion.div>
 
         {/* Alternating timeline layout */}

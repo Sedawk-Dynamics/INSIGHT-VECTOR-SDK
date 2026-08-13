@@ -241,7 +241,7 @@ export default function LeadershipDevelopmentPage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="relative"
+              className="relative lg:order-2"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square max-w-md">
                 <Image
@@ -259,7 +259,7 @@ export default function LeadershipDevelopmentPage() {
               </div>
             </motion.div>
 
-            <div>
+            <div className="lg:order-1">
               <motion.div
                 variants={fadeUp}
                 initial="hidden"

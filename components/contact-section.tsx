@@ -57,9 +57,9 @@ export default function ContactSection() {
               <h3 className="font-serif text-2xl text-[#0C2298] mb-6">Contact Information</h3>
               <div className="space-y-5">
                 {[
-                  { icon: Mail, label: 'Email', value: 'contact@insightvector.com' },
-                  { icon: Phone, label: 'Phone', value: '+65 0000 0000' },
-                  { icon: MapPin, label: 'Location', value: 'Singapore · Global' },
+                  { icon: Mail, label: 'Email', value: 'info@insightvector.com' },
+                  { icon: Phone, label: 'Phone', value: '+91 9136110496' },
+                  { icon: MapPin, label: 'Location', value: 'Mumbai · Global' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-center gap-4">
                     <div className="w-11 h-11 rounded-xl bg-[#EEF2FF] flex items-center justify-center shrink-0">

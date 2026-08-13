@@ -20,14 +20,16 @@ export default function FounderSection() {
           </h2>
         </motion.div>
 
+        {/* Portrait is ordered to the right on large screens; it stays first on
+            mobile so the reader meets the face before the long message. */}
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
           {/* Portrait */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-2 relative"
+            className="lg:col-span-2 relative lg:order-2"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.14)]">
               <Image
@@ -48,26 +50,25 @@ export default function FounderSection() {
               transition={{ delay: 0.5, duration: 0.7 }}
               className="absolute -bottom-6 left-8 right-8 bg-white rounded-2xl shadow-[0_8px_40px_rgba(83,122,237,0.18)] border border-[#D0DAF8] p-5"
             >
-              <p className="font-serif text-xl text-[#0C2298]">Santanu Sengupta</p>
-              <p className="text-sm text-[#0C2298] font-medium font-sans">Founder, Insight Vector</p>
-              <p className="text-xs text-[#0C2298] font-sans mt-1">
-                Former MD Wells Fargo Bank
-                <br/>
+              <p className="font-serif text-xl font-bold text-[#0C2298]">Santanu Sengupta</p>
+              <p className="text-sm text-[#0C2298] font-bold font-sans">Founder, Insight Vector</p>
+              <p className="text-sm text-[#0C2298] font-bold font-sans mt-1 leading-relaxed">
+                Former MD, Wells Fargo Bank
+                <br />
                 Board Director
-                <br/> 
+                <br />
                 ICF Certified Executive Coach
-               
               </p>
             </motion.div>
           </motion.div>
 
           {/* Message content */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-3 space-y-6 pt-0 lg:pt-4"
+            className="lg:col-span-3 space-y-6 pt-0 lg:pt-4 lg:order-1"
           >
             {/* items-start keeps the quote mark on the first line rather than
                 floating to the vertical centre once the text wraps. */}
