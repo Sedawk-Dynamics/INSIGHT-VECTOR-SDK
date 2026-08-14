@@ -37,6 +37,17 @@ export const metadata: Metadata = {
     'Insight Vector',
   ],
   authors: [{ name: 'Santanu Sengupta' }],
+  // Two tiles of the IV mark: the navy one reads against light browser tabs,
+  // the white one against dark. app/favicon.ico is emitted automatically by the
+  // file convention and serves as the multi-size fallback for clients that
+  // ignore the media queries, so it is deliberately not repeated here.
+  icons: {
+    icon: [
+      { url: '/icon-light.png', type: 'image/png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png', type: 'image/png', media: '(prefers-color-scheme: dark)' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     title: 'Insight Vector | Clarity for Complexity',
     description:
