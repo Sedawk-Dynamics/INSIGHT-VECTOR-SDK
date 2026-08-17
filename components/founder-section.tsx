@@ -23,45 +23,6 @@ export default function FounderSection() {
         {/* Portrait is ordered to the right on large screens; it stays first on
             mobile so the reader meets the face before the long message. */}
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-          {/* Portrait */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-2 relative lg:order-2"
-          >
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.14)]">
-              <Image
-                src="/founder-portrait.jpg"
-                alt="Santanu Sengupta, Founder of Insight Vector"
-                width={480}
-                height={600}
-                className="w-full h-[500px] lg:h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2298]/20 to-transparent" />
-            </div>
-
-            {/* Name badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.7 }}
-              className="absolute -bottom-6 left-8 right-8 bg-white rounded-2xl shadow-[0_8px_40px_rgba(83,122,237,0.18)] border border-[#D0DAF8] p-5"
-            >
-              <p className="font-serif text-xl font-bold text-[#0C2298]">Santanu Sengupta</p>
-              <p className="text-sm text-[#0C2298] font-bold font-sans">Founder, Insight Vector</p>
-              <p className="text-sm text-[#0C2298] font-bold font-sans mt-1 leading-relaxed">
-                Former MD, Wells Fargo Bank
-                <br />
-                Board Director
-                <br />
-                ICF Certified Executive Coach
-              </p>
-            </motion.div>
-          </motion.div>
-
           {/* Message content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -117,6 +78,45 @@ export default function FounderSection() {
               </div>
             </motion.div>
           </motion.div>
+          {/* Portrait */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-2 relative lg:order-2"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.14)]">
+              <Image
+                src="/founder-portrait.jpg"
+                alt="Santanu Sengupta, Founder of Insight Vector"
+                width={480}
+                height={600}
+                className="w-full h-[500px] lg:h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C2298]/20 to-transparent" />
+            </div>
+
+            {/* Name badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.7 }}
+              className="absolute -bottom-6 left-8 right-8 bg-white rounded-2xl shadow-[0_8px_40px_rgba(83,122,237,0.18)] border border-[#D0DAF8] p-5"
+            >
+              <p className="font-serif text-xl font-bold text-[#0C2298]">Santanu Sengupta</p>
+              <p className="text-sm text-[#0C2298] font-bold font-sans">Founder, Insight Vector</p>
+              <p className="text-sm text-[#0C2298] font-bold font-sans mt-1 leading-relaxed">
+                Former MD, Wells Fargo Bank
+                <br />
+                Board Director
+                <br />
+                ICF Certified Executive Coach
+              </p>
+            </motion.div>
+          </motion.div>
+
         </div>
       </div>
     </section>

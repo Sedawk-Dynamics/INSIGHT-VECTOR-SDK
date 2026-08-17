@@ -134,12 +134,16 @@ export default function HeroSection() {
             className="relative hidden lg:block"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.15)]">
+              {/* The source is a wide 16:9 frame, so the box follows that ratio
+                  rather than a fixed 520px height, which would have cropped the
+                  strategy board on the right out of shot. */}
               <Image
-                src="/hero-banner.jpeg"
+                src="/hero-banner.png"
                 alt="Executive boardroom strategy session"
-                width={680}
-                height={520}
-                className="w-full h-[520px] object-cover"
+                width={1663}
+                height={928}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="w-full aspect-[16/10] object-cover"
                 priority
               />
               {/* Overlay tint */}

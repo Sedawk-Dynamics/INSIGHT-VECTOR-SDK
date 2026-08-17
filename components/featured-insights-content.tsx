@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, CalendarDays, Mail, Users } from 'lucide-react'
+import { ArrowRight, CalendarDays } from 'lucide-react'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import CtaBanner from '@/components/cta-banner'

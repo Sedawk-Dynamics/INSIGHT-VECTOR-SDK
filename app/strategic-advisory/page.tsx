@@ -239,7 +239,7 @@ export default function StrategicAdvisoryPage() {
               viewport={{ once: true }}
               className="relative lg:order-2"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square max-w-md">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square max-w-md lg:ml-auto">
                 <Image
                   src="/founder-portrait.jpg"
                   alt="Santanu Sengupta — Founder, Insight Vector"
