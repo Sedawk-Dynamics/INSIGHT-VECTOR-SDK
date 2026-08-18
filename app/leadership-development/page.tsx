@@ -253,7 +253,7 @@ export default function LeadershipDevelopmentPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C2298]/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="font-serif text-white text-lg font-semibold">Santanu Sengupta</p>
+                  <p className="font-serif text-white text-lg font-bold">Santanu Sengupta</p>
                   <p className="text-[#A8C0FF] text-base">Founder, Insight Vector</p>
                 </div>
               </div>
