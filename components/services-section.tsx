@@ -86,7 +86,7 @@ export default function ServicesSection() {
               >
                 {/* Number + Icon row */}
                 <div className="flex items-center justify-between mb-8">
-                  <span className="font-serif text-5xl text-[#EEF2FF] font-semibold select-none">
+                  <span className="font-serif text-5xl text-[#0C2298] font-semibold select-none">
                     {service.number}
                   </span>
                   <div className="w-14 h-14 rounded-2xl bg-[#EEF2FF] flex items-center justify-center group-hover:bg-[#537AED] transition-colors duration-300">

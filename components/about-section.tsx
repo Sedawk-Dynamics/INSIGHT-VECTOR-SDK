@@ -69,7 +69,7 @@ export default function AboutSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_80px_rgba(12,34,152,0.12)]">
               <Image
-                src="/strategy-session.png"
+                src="/hero-banner.png"
                 alt="Strategic advisory session at Insight Vector"
                 width={600}
                 height={480}
