@@ -134,16 +134,15 @@ export default function HeroSection() {
             className="relative hidden lg:block"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(12,34,152,0.15)]">
-              {/* The source is a wide 16:9 frame, so the box follows that ratio
-                  rather than a fixed 520px height, which would have cropped the
-                  strategy board on the right out of shot. */}
+              {/* The box matches the source's 3:2 ratio so the portrait is shown
+                  whole rather than cropped to fit a taller frame. */}
               <Image
-                src="/hero-banner.png"
-                alt="Executive boardroom strategy session"
-                width={1663}
-                height={928}
+                src="/Santanu-pic-10.webp"
+                alt="Santanu Sengupta, Founder of Insight Vector"
+                width={1600}
+                height={1066}
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="w-full aspect-[16/10] object-cover"
+                className="w-full aspect-[3/2] object-cover"
                 priority
               />
               {/* Overlay tint */}
