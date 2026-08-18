@@ -128,7 +128,7 @@ const insights: Insight[] = [
     excerpt:
       'Featured in the November edition of Director Today, the monthly journal of the Institute of Directors (IOD), India. AI is transforming ESG from a compliance checkbox into a strategic boardroom tool.',
     date: '13 November 2025',
-    image: BOARDROOM_IMAGE,
+    image: '/insights/ai-esg-director-today.jpg',
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7394576132072947712/',
   },
   {
