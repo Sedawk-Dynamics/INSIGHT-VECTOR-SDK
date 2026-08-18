@@ -167,7 +167,7 @@ export default function StrategicAdvisoryPage() {
               custom={2}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[16/9]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[560px]">
                 <Image
                   src="/hero-banner.png"
                   alt="Strategic advisory session"
