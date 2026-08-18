@@ -17,8 +17,6 @@ type Insight = {
 
 const NEWSLETTER_URL =
   'https://www.linkedin.com/newsletters/boardroom-beyond-7334260123055321088/'
-/** Boardroom & Beyond artwork, used for the newsletter card and posts with no image of their own. */
-const BOARDROOM_IMAGE = '/boardroom-and-beyond.png'
 
 /**
  * Posts are listed in the same order as the source page. Dates are decoded from
@@ -56,7 +54,7 @@ const insights: Insight[] = [
     excerpt:
       'Strategy gets built in boardrooms. Risk gets reviewed in audit committees. The two rarely intersect until something goes wrong. Organisations that embed enterprise risk management into strategic planning move faster, not slower.',
     date: '8 January 2026',
-    image: BOARDROOM_IMAGE,
+    image: '/insights/enterprise-risk-strategy-table.jpg',
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7414868319561945088/',
   },
   {
