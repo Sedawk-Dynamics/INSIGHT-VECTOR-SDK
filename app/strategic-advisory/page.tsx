@@ -82,7 +82,7 @@ export default function StrategicAdvisoryPage() {
       <section className="pt-28 lg:pt-32 pb-0 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#EEF2FF] via-white to-white pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center pb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start pb-16">
             {/* Left */}
             <div>
               <motion.div
@@ -167,11 +167,12 @@ export default function StrategicAdvisoryPage() {
               custom={2}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[16/9]">
                 <Image
-                  src="/strategy-session.png"
+                  src="/hero-banner.png"
                   alt="Strategic advisory session"
                   fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
                   priority
                 />
