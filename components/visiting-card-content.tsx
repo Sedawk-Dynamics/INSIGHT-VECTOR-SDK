@@ -40,7 +40,7 @@ const contacts = [
   },
 ]
 
-const VISITING_CARD = '/qr/insight-vector-visiting-card.pdf'
+const VISITING_CARD = '/visiting-card/insight-vector-visiting-card.pdf'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -51,7 +51,7 @@ const fadeUp = {
   }),
 }
 
-export default function QrScanContent() {
+export default function VisitingCardContent() {
   return (
     /* Standalone layout with no navbar: this page is the target of a QR code on
        a printed card, so it opens on a phone and leads with the card itself. */
