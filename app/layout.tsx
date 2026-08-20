@@ -76,6 +76,12 @@ export const metadata: Metadata = {
     description: 'Strategic Advisory, Executive Coaching & Leadership Development.',
     images: [OG_IMAGE.url],
   },
+  // Google Search Console ownership proof for https://www.insightvector.in/.
+  // Emits <meta name="google-site-verification">; the token is public by design
+  // and must stay in place, since removing it un-verifies the property.
+  verification: {
+    google: 'wI17pX_ShcuKHjzz5Nef9cNQL0ySUxJafQ0y3GpfZnk',
+  },
   robots: {
     index: true,
     follow: true,
