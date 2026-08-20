@@ -53,13 +53,22 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   category: 'Business Consulting',
   formatDetection: { email: false, address: false, telephone: false },
-  // The IV mark on its white tile, used everywhere. app/favicon.ico is emitted
-  // automatically by the file convention and carries the small sizes, so it is
-  // deliberately not repeated here.
+  // Google's favicon crawler wants a square icon whose side is a multiple of
+  // 48px, fetched from the home page or /favicon.ico, so the full ladder is
+  // declared rather than a single 512px file.
   icons: {
-    icon: [{ url: '/icon.png', type: 'image/png', sizes: '512x512' }],
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/icon-48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/icon-96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/icon-144.png', type: 'image/png', sizes: '144x144' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: [{ url: '/favicon.ico' }],
     apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
+  manifest: '/manifest.webmanifest',
   openGraph: {
     title: 'Insight Vector | Clarity for Complexity',
     description:
