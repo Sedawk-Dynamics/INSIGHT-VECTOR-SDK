@@ -138,7 +138,7 @@ export default function HeroSection() {
                   whole rather than cropped to fit a taller frame. */}
               <Image
                 src="/Santanu-pic-10.webp"
-                alt="Santanu Sengupta, Founder of Insight Vector"
+                alt="Santanu Sengupta, Founder of Insight Vector, strategic advisor and ICF-credentialed executive coach"
                 width={1600}
                 height={1066}
                 sizes="(min-width: 1024px) 50vw, 100vw"

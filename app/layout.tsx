@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Poppins } from 'next/font/google'
 import './globals.css'
+import { SiteStructuredData } from '@/components/structured-data'
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -22,21 +24,35 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  // Lets pages declare relative canonical / OG URLs and have them resolved absolutely.
-  metadataBase: new URL('https://insightvector.com'),
-  title: 'Insight Vector | Strategic Advisory & Executive Coaching',
-  description:
-    'Insight Vector is a founder-led strategic advisory, executive coaching and leadership development firm helping founders, CXOs and senior leaders navigate complexity, accelerate growth and build future-ready organisations.',
+  // Resolves every relative canonical / OG URL. This must be the domain the
+  // business actually owns, or the canonicals point search engines elsewhere.
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Insight Vector | Strategic Advisory, Executive Coaching & Leadership Development',
+    // Subpages supply their own title; this appends the brand consistently.
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
     'strategic advisory',
     'executive coaching',
     'leadership development',
+    'board advisory',
     'integrated risk management',
+    'corporate governance',
     'responsible AI',
+    'ESG oversight',
+    'executive coach India',
     'Santanu Sengupta',
     'Insight Vector',
   ],
-  authors: [{ name: 'Santanu Sengupta' }],
+  authors: [{ name: 'Santanu Sengupta', url: SITE_URL }],
+  creator: 'Santanu Sengupta',
+  publisher: SITE_NAME,
+  alternates: { canonical: '/' },
+  category: 'Business Consulting',
+  formatDetection: { email: false, address: false, telephone: false },
   // The IV mark on its white tile, used everywhere. app/favicon.ico is emitted
   // automatically by the file convention and carries the small sizes, so it is
   // deliberately not repeated here.
@@ -49,12 +65,27 @@ export const metadata: Metadata = {
     description:
       'Strategic Advisory, Executive Coaching & Leadership Development for founders, CXOs and senior leaders.',
     type: 'website',
-    url: 'https://insightvector.com',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: 'en_IN',
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Insight Vector | Clarity for Complexity',
     description: 'Strategic Advisory, Executive Coaching & Leadership Development.',
+    images: [OG_IMAGE.url],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 }
 
@@ -70,7 +101,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${poppins.variable} bg-white`}>
-      <body className="antialiased font-sans">{children}</body>
+      <body className="antialiased font-sans">
+        <SiteStructuredData />
+        {children}
+      </body>
     </html>
   )
 }

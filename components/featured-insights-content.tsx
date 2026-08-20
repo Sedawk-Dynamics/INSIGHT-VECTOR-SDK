@@ -37,7 +37,7 @@ const insights: Insight[] = [
     excerpt:
       'As boardrooms double down on purpose and performance, ESG can no longer be a checkbox. It must be auditable, decision-useful, and held to the same standards as financial reporting.',
     date: '27 June 2025',
-    image: '/insights/2.png',
+    image: '/insights/2.webp',
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7344445973743448064/',
   },
   {
@@ -46,7 +46,7 @@ const insights: Insight[] = [
     excerpt:
       "It was a deepfake. AI-driven cyberattacks are projected to cost India's financial sector over ₹20,000 crore in 2025 — deepfake impersonation, synthetic identity fraud and AI-powered phishing.",
     date: '17 December 2025',
-    image: '/insights/3.png',
+    image: '/insights/3.webp',
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7407100672267104256/',
   },
   {
@@ -134,7 +134,7 @@ const insights: Insight[] = [
     excerpt:
       'It is a boardroom agenda that shapes resilience, trust and long-term growth. The real question: are today\'s boards ready to lead this shift?',
     date: '11 September 2025',
-    image: '/insights/14.png',
+    image: '/insights/14.webp',
     href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7371886216083845120/',
   },
   {

@@ -69,8 +69,8 @@ export default function AboutSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_80px_rgba(12,34,152,0.12)]">
               <Image
-                src="/hero-banner.png"
-                alt="Strategic advisory session at Insight Vector"
+                src="/hero-banner.webp"
+                alt="Insight Vector strategic advisory session with founders reviewing a growth strategy framework"
                 width={600}
                 height={480}
                 className="w-full h-[380px] object-cover"
