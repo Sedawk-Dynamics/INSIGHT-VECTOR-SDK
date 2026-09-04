@@ -14,6 +14,9 @@ const routes = [
   { path: '/leadership-development', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/featured-insights', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/gallery', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms-of-use', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/disclaimer', priority: 0.3, changeFrequency: 'yearly' },
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

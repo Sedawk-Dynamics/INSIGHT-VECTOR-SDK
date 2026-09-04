@@ -23,6 +23,13 @@ const footerLinks = {
   ],
 }
 
+/** Legal documents, shown in the bottom bar rather than the link columns. */
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Use', href: '/terms-of-use' },
+  { label: 'Disclaimer', href: '/disclaimer' },
+]
+
 /** The Boardroom & Beyond newsletter on LinkedIn. */
 const NEWSLETTER_URL =
   'https://www.linkedin.com/newsletters/boardroom-beyond-7334260123055321088/'
@@ -112,9 +119,15 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#0C2298] font-sans">
           <p>&copy; {new Date().getFullYear()} Insight Vector. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="#" className="hover:text-[#537AED] transition-colors duration-200">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[#537AED] transition-colors duration-200">Terms of Use</Link>
-            <Link href="#" className="hover:text-[#537AED] transition-colors duration-200">Disclaimer</Link>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-[#537AED] transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
