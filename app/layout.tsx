@@ -4,6 +4,8 @@ import './globals.css'
 import { SiteStructuredData } from '@/components/structured-data'
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
+const GA_MEASUREMENT_ID = 'G-1ZH32HCFBX'
+
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
   // 400 is the lightest weight used; 300 rendered too thin and caused
@@ -116,6 +118,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${poppins.variable} bg-white`}>
+      <head>
+        {/* Google tag (gtag.js) for GA4 property G-1ZH32HCFBX. Google asks for it
+            as high in <head> as possible and once per page; the root layout
+            renders it into the server HTML of every route. */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+          }}
+        />
+      </head>
       <body className="antialiased font-sans">
         <SiteStructuredData />
         {children}
