@@ -4,7 +4,7 @@ import './globals.css'
 import { SiteStructuredData } from '@/components/structured-data'
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
-const GA_MEASUREMENT_ID = 'G-1ZH32HCFBX'
+const GA_MEASUREMENT_ID = 'G-NG190BWZFF'
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -119,7 +119,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${poppins.variable} bg-white`}>
       <head>
-        {/* Google tag (gtag.js) for GA4 property G-1ZH32HCFBX. Google asks for it
+        {/* Google tag (gtag.js) for GA4 property G-NG190BWZFF. Google asks for it
             as high in <head> as possible and once per page; the root layout
             renders it into the server HTML of every route. */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
